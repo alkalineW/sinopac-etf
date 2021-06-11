@@ -2,10 +2,11 @@
 var tip = d3.tip()
 	.attr('class', 'd3-tip')
 	.html(function (d) {
-		console.log(d)
-		return '<span>' + d.y + '%</span>'
+		return '<span class="text-center d-block">' + d.x + '</span><span>S&P500指數報酬率:' + d.y + '%</span>'
 	})
-	.offset([-10, 0])
+	.offset(function () {
+		return [-10, 0];
+	})
 
 
 // Create Element.remove() function if not exist
@@ -129,10 +130,7 @@ var lineChartWidth = parseInt(d3.select(".line-chart").style("width")),
 
 
 // 全局chart的尺寸
-var scaleRatio = null;
-var zoomInRatio = null;
-var dataSet = null;
-
+var scaleRatio = null, zoomInRatio = null, dataSet = null;
 var svg, valArrX, valArrY;
 
 // chart root ()
@@ -205,8 +203,6 @@ function d3update(target, chartSize) {
 	d3drawAxis(svg, chartSize);
 	d3drawLine(svg);
 	d3drawCircle(svg);
-
-	// console.log(svg);
 }
 
 function d3drawLine(target) {
@@ -306,7 +302,7 @@ function d3drawAxis(target, chartSize) {
 		// console.log(valArrX[d]);
 
 		if (window.innerWidth < 1280) {
-			console.log(valArrX[d].slice(-1));
+			// console.log(valArrX[d].slice(-1));
 			val = valArrX[d].slice(0, 7);
 		}
 		return val;
@@ -342,12 +338,14 @@ function d3drawAxis(target, chartSize) {
 		.attr('class', 'axis-x')
 		.style("font-weight", "bold")
 		.each(function (d, i) {
-
-			// if (i == 0 || i + 1 == valArrX.length) {
-			// 	this.remove();
-			// }
-			if (window.innerWidth < 1280 && i % 2 == 1 && i !== 0 && i + 1 !== valArrX.length) {
-				this.remove();
+			if (window.innerWidth < 1280 && valArrX.length > 5) {
+				// valArrX=12 
+				if (i % 3 !== 0 && valArrX.length == 10) {
+					this.remove();
+				}
+				if (i % 6 !== 5 && i + 1 !== valArrX.length && i !== 0 && valArrX.length == 12) {
+					this.remove();
+				}
 			}
 		});
 	// .attr("transform", `translate(0, ${-padding.top * 2.5})`)
@@ -380,7 +378,6 @@ function d3drawCircle(chartRootDom) {
 
 	// call tooltip in eachCircle
 	// console.log(dataSet);
-
 	// console.log(updateCircle);
 
 	var exitCircle = updateCircle.exit();
@@ -398,6 +395,8 @@ function d3drawCircle(chartRootDom) {
 function handleMouseOver(d, i) {
 	var colorArr = ["#66a222", "#c62f70", "#00aedb", "#a200ff", "#f47835", "#d41243"];
 	var colorIndex;
+	var x = d3.event.x;
+
 	if (i >= colorArr.length) {
 		colorIndex = i % colorArr.length;
 	} else {
@@ -405,10 +404,39 @@ function handleMouseOver(d, i) {
 	}
 	// show tip
 	tip.show(d, this);
+	console.log('posX:' + x);
+
+	// when device width smaller than 768px tip position
+	detectTipPos(tip, window.innerWidth, x);
 
 	d3.select(this)
 		.classed("aniDots", true)
 		.attr("stroke", colorArr[colorIndex]);
+}
+
+
+function detectTipPos(target, deviceWidth, evtX) {
+	var tipMaxWidth;
+	if (deviceWidth < 576) {
+		tipMaxWidth = 196;
+	}
+	else if (deviceWidth < 768 && deviceWidth > 576) {
+		tipMaxWidth = 262;
+	} else {
+		tipMaxWidth = 326;
+	}
+
+	// left exceed & right exceed
+	if (evtX < tipMaxWidth / 2) {
+		target.style('left', 0 + 'px');
+	} else if (evtX + (tipMaxWidth / 2) > deviceWidth) {
+		target.style('left', 'unset');
+		target.style('right', '0');
+	} else {
+		target.style('left', evtX - (tipMaxWidth / 2) + 'px');
+		target.style('right', 'unset');
+	}
+
 }
 
 function handleMouseOut(d) {
@@ -423,8 +451,7 @@ function handleMouseOut(d) {
 function fillCircle(target) {
 	// color array
 	var colorArr = ["#66a222", "#c62f70", "#00aedb", "#a200ff", "#f47835", "#d41243"];
-	var circleXpos = null;
-	var circleYpos = null;
+	var circleXpos = null, circleYpos = null;
 
 	target.call(tip);
 
@@ -440,9 +467,7 @@ function fillCircle(target) {
 		})
 		// circle 's x position
 		.attr("cx", function (d, i) {
-			// ????
 			circleXpos = parseInt((i * lineRealWidth) / (dataSet.length - 1) + linePadding.left);
-
 			return parseInt((i * lineRealWidth) / (dataSet.length - 1) + linePadding.left);
 		})
 		// circle 's y position
@@ -455,16 +480,15 @@ function fillCircle(target) {
 				(((d.y - bottomY) * lineRealHeight) / yLength) * -1 + lineRealHeight);
 			// console.log(posY);
 
-			// ????
 			circleYpos = posY + linePadding.top;
 
 			return posY + linePadding.top;
 		})
 		.attr("r", function () {
-			var dSize;
+			var dSize = 10;
 			if (window.innerWidth > 768) { dSize = 10 }
 			else {
-				dSize = 6
+				dSize = 8
 			}
 			return dSize;
 		})
@@ -472,13 +496,11 @@ function fillCircle(target) {
 }
 
 var rangeSliderCont = document.getElementsByClassName("range-slider-cont");
-var rangeSliderVal = 0;
-var rangeSliderOrient = null;
+var rangeSliderVal = 0, rangeSliderOrient = null;
 var mediaQuery = window.matchMedia("(max-width: 768px)");
 
 // replacing values when change range slide
-// var profitRate = document.getElementById("profit-rate");
-// var speechCont = document.getElementById("speech-cont");
+
 var accuProfit = document.getElementById("accu-profit");
 var yearSpan = document.getElementById("year-span");
 var snowBall = document.getElementById("snow-ball");
@@ -492,9 +514,7 @@ function verifyRangeSliderOrient(e) {
 		console.log("small than 768");
 	} else {
 		rangeSliderOrient = "vertical";
-		// console.log("bigger than 768");
 	}
-	// console.log(rangeSliderOrient);
 	$("#rangeSlider").slider({
 		orientation: rangeSliderOrient,
 		range: "min",
@@ -502,26 +522,31 @@ function verifyRangeSliderOrient(e) {
 		min: 0,
 		max: 3,
 		step: 1,
+		create: function () {
+			var sliderWrap = $(this).parent().parent(); // this 為 slider ui dom
+			var lapse = null;
+			window.innerWidth <= 768 ? lapse = 4000 : lapse = 6000;
+			sliderWrap.addClass('disable');
+			setTimeout((function () {
+				sliderWrap.removeClass('disable');
+			}), lapse)
+		},
 		change: function (event, ui) {
 			var preventSliderVal = rangeSliderVal;
+			console.log("preventSliderVal:" + preventSliderVal + ", ui.value:" + ui.value);
 			// prevent mutiple click on same item
-			if (!event.detail || event.detail == 1 && preventSliderVal !== ui.value) {
-
+			if (preventSliderVal !== ui.value) {
 				var lapse = null;
 				window.innerWidth <= 768 ? lapse = 4000 : lapse = 6000;
-
-				console.log($(event.target).parent().parent());
-
 				$(event.target).parent().parent().addClass('disable');
-
+				$('.d3-tip').css('opacity', '0');
 				rangeSliderVal = ui.value;
 				showCorrespondArea(rangeSliderCont, rangeSliderVal);
-
 				setTimeout((function () {
 					$(event.target).parent().parent().removeClass('disable');
 				}), lapse)
-
 			} else {
+				// console.log('changed');
 				return false;
 			}
 		},
@@ -535,13 +560,13 @@ mediaQuery.addListener(verifyRangeSliderOrient);
 function showCorrespondArea(target, index) {
 	var yearSpanArr = ["1", "3", "5", "10"];
 	var snowBallBubbleInfo = [
-		"在<span class='sp'>2020</span>年期間<br>投資 S&P500 指數累積報酬率高達：<span class='sp'>+16.26%</span>，<br>你滾出了一顆小雪球，但其實還有更大的 切換時間點找出大雪球吧",
-		"在<span class='sp'>2017</span>年至<span class='sp'>2020</span>年間<br>投資 S&P500 指數累積報酬率高達：<span class='sp'>+40.49%</span>，<br>你滾出了一顆小雪球，但其實還有更大的 切換時間點找出大雪球吧",
-		"在<span class='sp'>2015</span>年至<span class='sp'>2020</span>年間<br>投資 S&P500 指數累積報酬率高達：<span class='sp'>+83.77%</span>，<br>你滾出了一顆中雪球，但其實還有更大的 切換時間點找出大雪球吧",
-		"在<span class='sp'>2010</span>年至<span class='sp'>2020</span>年間<br>投資 S&P500 指數累積報酬率高達：<span class='sp'>+198.66%</span>，<br>恭喜你！滾出了一顆大雪球！<br>掌握長期投資心法，你也有機會滾出大雪球！"]
+		"假設您在<span class='sp'>2020</span>年期間<br>投資 S&P500 指數累積報酬率為：<span class='sp'>+16.26%</span>，<br>你滾出了一顆小雪球，但其實還有更大的<br>切換時間點找出大雪球吧",
+		"假設您在<span class='sp'>2018</span>年至<span class='sp'>2020</span>年間<br>投資 S&P500 指數累積報酬率為：<span class='sp'>+40.49%</span>，<br>你滾出了一顆中雪球，但其實還有更大的！<br>切換時間點找出大雪球吧！",
+		"假設您在<span class='sp'>2016</span>年至<span class='sp'>2020</span>年間<br>投資 S&P500 指數累積報酬率為：<span class='sp'>+83.77%</span>，<br>你滾出了一顆中雪球，但其實還有更大的！<br>切換時間點找出大雪球吧！",
+		"假設您在<span class='sp'>2011</span>年至<span class='sp'>2020</span>年間<br>投資 S&P500 指數累積報酬率為：<span class='sp'>+198.66%</span>，<br>恭喜你！滾出了一顆大雪球！<br>掌握長期投資心法，你也有機會滾出大雪球！"]
 	var snowBallBubbleInfoShirnk = [
 		"S&P500指數報酬率為:<span class='sp'>+16.26%</span><br>你滾出了一顆小雪球",
-		"S&P500指數報酬率為:<span class='sp'>+40.49%</span><br>你滾出了一顆小雪球",
+		"S&P500指數報酬率為:<span class='sp'>+40.49%</span><br>你滾出了一顆中雪球",
 		"S&P500指數報酬率為:<span class='sp'>+83.77%</span><br>你滾出了一顆中雪球",
 		"S&P500指數報酬率為:<span class='sp'>+198.66%</span><br>恭喜你！滾出了一顆大雪球！掌握長期投資心法，你也有機會滾出大雪球！"
 	]
@@ -592,9 +617,8 @@ function snowBallWrapAniStagger(i) {
 			duration: walkingLapse,
 			left: "calc(100% - " + (snowWrapLeftVal) + "px)",
 			onComplete: snowComplete,
+			onCompleteParams: [snowWrapLeftVal]
 		});
-
-
 	gsap.fromTo("#snow-ball", { width: (snowBallSize * .7) + 'px' }, { duration: walkingLapse, width: snowBallSize + "px" });
 }
 
@@ -610,12 +634,22 @@ function keyVisualPopup() {
 
 
 
-function snowComplete() {
+function snowComplete(refPos) {
 	snowPeopleImg.classList.remove('active');
-	var snowInnerBubblePosXRef = snowballWrap.getBoundingClientRect();
+	// var snowInnerBubblePosXRef = snowballWrap.getBoundingClientRect();
+
+	var leftVal = refPos;
+
 	var snowInnerBubblePosX = null;
-	window.innerWidth > 768 ? snowInnerBubblePosX = snowInnerBubblePosXRef.x - 380 - 80 : snowInnerBubblePosX = "unset"
-	snowInnerBubble.style.left = snowInnerBubblePosX + "px";
+
+	// - 380
+	// window.innerWidth > 768 ? snowInnerBubblePosX = snowInnerBubblePosXRef.x - 380 : snowInnerBubblePosX = "unset";
+
+	window.innerWidth > 992 ? snowInnerBubblePosX = leftVal + 380 + 110 : snowInnerBubblePosX = "unset";
+	// console.log("snowInnerBubblePosX:"+snowInnerBubblePosX);
+	// snowInnerBubble.style.left = "calc(100% - "+snowInnerBubblePosX + "px)";
+
+	snowInnerBubble.style.left = "calc(100% - " + snowInnerBubblePosX + "px)";
 	snowInnerBubble.style.display = 'block';
 }
 

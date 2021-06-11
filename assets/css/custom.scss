@@ -1,27 +1,27 @@
 // color scheme
 $theme-color: (
-  "wh": #fff,
-  "gr": #e5e5e4,
-  "lightY": #fffef2,
-  "grayY": #f4f2e3,
-  "themeRed": #bd342a,
-  "golden1": #c0a05b,
-  "modalGold": #d7a34e,
-  "darkB": #0c151e,
-  "lightB": #bbd8de,
-  "bk": #222,
-  "neonB": #2fd2fd,
-  "darkBlue": #25458e,
-  "themeDarkBlue": #003777,
-  "tech": #005d9b,
-  "bioPurple": #683275,
-  "natureTeal": #115f71,
-  "nuGreen": #006c29,
-  "asiaOrange": #ea720f,
-  "asia": #df6e36,
-  "energy": #1a90aa,
-  "nu": #009036,
-  "pinky": #f77974,
+  'wh': #fff,
+  'gr': #e5e5e4,
+  'lightY': #fffef2,
+  'grayY': #f4f2e3,
+  'themeRed': #bd342a,
+  'golden1': #c0a05b,
+  'modalGold': #d7a34e,
+  'darkB': #0c151e,
+  'lightB': #bbd8de,
+  'bk': #222,
+  'neonB': #2fd2fd,
+  'darkBlue': #25458e,
+  'themeDarkBlue': #003777,
+  'tech': #005d9b,
+  'bioPurple': #683275,
+  'natureTeal': #115f71,
+  'nuGreen': #006c29,
+  'asiaOrange': #ea720f,
+  'asia': #df6e36,
+  'energy': #1a90aa,
+  'nu': #009036,
+  'pinky': #f77974,
 );
 
 @mixin flexC {
@@ -42,7 +42,7 @@ $theme-color: (
 }
 
 @mixin pseudo($p, $bgc) {
-  content: "";
+  content: '';
   position: $p;
   background-color: $bgc;
 }
@@ -234,10 +234,10 @@ $xsMobile: 360px;
     background-color: #767777;
   }
   45% {
-    background-color: map-get($theme-color, "themeRed");
+    background-color: map-get($theme-color, 'themeRed');
   }
   55% {
-    background-color: map-get($theme-color, "themeRed");
+    background-color: map-get($theme-color, 'themeRed');
   }
   100% {
     background-color: #767777;
@@ -386,8 +386,8 @@ $xsMobile: 360px;
 html,
 body {
   overflow-x: hidden;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "微軟正黑體", "蘋果儷黑體", "新細明體", Verdana,
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue',
+    Helvetica, Arial, '微軟正黑體', '蘋果儷黑體', '新細明體', Verdana,
     sans-serif;
   font-size: 22px;
   @include mobile {
@@ -397,7 +397,7 @@ body {
 
 body {
   background: url(../img/pageItem/bg-deco-arrow.png),
-    map-get($theme-color, "lightY");
+    map-get($theme-color, 'lightY');
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -423,18 +423,18 @@ h1 {
 }
 h2 {
   font-size: 34px;
-  @include tablet {
-    font-size: 30px;
-  }
+  // @include tablet {
+  //   font-size: 30px;
+  // }
   @include mobile {
     font-size: 23px;
   }
 }
 h3 {
   font-size: 28px;
-  @include tablet {
-    font-size: 26px;
-  }
+  // @include tablet {
+  //   font-size: 26px;
+  // }
   @include mobile {
     font-size: 20px;
   }
@@ -443,9 +443,9 @@ h3 {
 h4 {
   font-size: 24px;
   line-height: 1.5em;
-  @include tablet {
-    font-size: 20px;
-  }
+  // @include tablet {
+  //   font-size: 20px;
+  // }
   @include mobile {
     font-size: 18px;
   }
@@ -501,6 +501,10 @@ h4 {
 nav {
   background-color: rgba(255, 255, 255, 0.6);
 }
+.navbar-nav {
+  width: 100%;
+  max-width: 1080px;
+}
 .navbar-wrap {
   position: relative;
   z-index: 6;
@@ -522,9 +526,15 @@ nav {
   }
   .nav-item {
     cursor: pointer;
-    font-weight: bold;
-    color: #e25d3c;
+    flex: 1 1 0;
+    color: #cd411e;
     transition: all ease 0.6s;
+    a {
+      color: #cd411e;
+      &:hover {
+        text-decoration: none;
+      }
+    }
     &:hover {
       color: #fff;
       background-color: #eaa639;
@@ -602,7 +612,7 @@ nav {
     position: relative;
     width: 100%;
     min-height: 900px;
-    background: url("../img/pageItem/kv/kv-bg.png");
+    background: url('../img/pageItem/kv/kv-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
     margin: -135px auto 0 auto;
@@ -666,8 +676,8 @@ nav {
       left: calc(42% - 320px);
       z-index: 6;
       // masking for flicker effect
-      -webkit-mask: url("../img/pageItem/kv/kv-slogan-mask.png") no-repeat;
-      mask: url("../img/pageItem/kv/kv-slogan-mask.png") no-repeat;
+      -webkit-mask: url('../img/pageItem/kv/kv-slogan-mask.png') no-repeat;
+      mask: url('../img/pageItem/kv/kv-slogan-mask.png') no-repeat;
       -webkit-mask-size: contain;
       mask-size: contain;
       height: 220px;
@@ -701,7 +711,7 @@ nav {
         width: 100%;
         height: 100%;
         position: absolute;
-        content: "";
+        content: '';
         left: 0;
         top: 0;
         opacity: 1;
@@ -881,7 +891,7 @@ nav {
             position: absolute;
             overflow: hidden;
             img {
-              background-color: map-get($theme-color, "wh");
+              background-color: map-get($theme-color, 'wh');
               animation: screenAni 14s cubic-bezier(0.165, 0.84, 0.44, 1)
                 infinite;
             }
@@ -1043,7 +1053,7 @@ nav {
     }
   }
   .kv-cta-wrap {
-    background-color: map-get($theme-color, "lightY");
+    background-color: map-get($theme-color, 'lightY');
   }
   .rounded-anchor {
     background-color: #e25d3c;
@@ -1099,12 +1109,12 @@ nav {
   .benefit-col {
     width: 25%;
     padding: 2% 2% 0 2%;
-    img {
+    img:not(.quest-icon) {
       width: 100%;
       position: relative;
     }
     &:nth-of-type(1) {
-      img {
+      img:not(.quest-icon) {
         &:first-of-type {
           position: absolute;
           left: 0;
@@ -1116,11 +1126,6 @@ nav {
           left: 0;
           top: 0;
           animation: coinMoving2 1.9s infinite;
-        }
-      }
-      .whatIsIndex {
-        img {
-          position: relative;
         }
       }
     }
@@ -1220,36 +1225,7 @@ nav {
       margin: auto;
     }
   }
-  .whatIsIndex {
-    cursor: pointer;
-    text-align: left;
-    position: relative;
-    &:after {
-      @include size(36px, 36px);
-      position: absolute;
-      left: 0;
-      border-radius: 40px;
-      z-index: 1;
-      background-color: #767777;
-      animation: bgCChanging 0.6s infinite;
-      content: "";
-    }
-    @include lgTablet {
-      max-width: 680px;
-      margin: auto;
-    }
-    span {
-      top: 2px;
-      position: relative;
-    }
-    img {
-      position: relative;
-      display: inline-block;
-      @include size(36px, 36px);
-      z-index: 2;
-      animation: scaling 0.6s infinite;
-    }
-  }
+
   #whatIsIndexContent {
     padding: 10px 0;
     @include lgTablet {
@@ -1259,26 +1235,16 @@ nav {
   }
   .rounded-anchor {
     background-color: #1db8bf;
+    margin: 0 0 1.2rem 0;
     &:after {
       background-color: darken(#009ebb, 10);
-    }
-    @include tablet {
-      margin: 1.2rem 0 0 0;
     }
   }
 }
 
 .classic-example {
   padding: 5px 0 0 0;
-  max-width: 1280px;
   margin: auto;
-  // @include lgDesktop {
-  //   max-width: 1200px;
-  // }
-  // @include mdDesktop {
-  //   padding: 20px 10px;
-  // }
-
   h2 {
     color: #5d8d53;
     position: relative;
@@ -1293,7 +1259,7 @@ nav {
   p {
     font-size: 22px;
     @include tablet {
-      font-size: 19px;
+      // font-size: 19px;
     }
     @include mobile {
       font-size: 18px;
@@ -1307,18 +1273,20 @@ nav {
   }
 
   .d-flex {
+    // max-width: 1280px;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
     @include tablet {
       flex-direction: column-reverse;
     }
   }
   .left-col {
-    width: 20%;
+    // width: 20%;
+    width: 220px;
     text-align: center;
     @include tablet {
       width: 90%;
-      padding: 0 0 25px 0;
+      padding: 12px 0 45px 0;
     }
     p {
       margin: 0 0 0.5rem 0;
@@ -1329,11 +1297,14 @@ nav {
       }
     }
     img {
-      width: 60px;
+      // width: 60px;
+      width: 56px;
       position: relative;
       animation: axisYmoving 0.5s infinite;
+      margin-bottom: 26px;
       @include tablet {
         width: 40px;
+        margin-bottom: 0;
       }
       @include mobile {
         width: 30px;
@@ -1341,11 +1312,15 @@ nav {
       }
     }
   }
+
   .right-col {
+    width: 80%;
     display: flex;
     align-items: center;
-    @include mobile {
+    justify-content: center;
+    @include tablet {
       justify-content: center;
+      width: 100%;
     }
     // @include mdMobile {
     //   flex-direction: column-reverse;
@@ -1376,10 +1351,11 @@ nav {
         padding: 0.4rem;
       }
       @include mobile {
-        margin: 0;
+        margin: 0 6px 0 0;
+        font-size: 16px;
       }
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         width: 0;
         height: 0;
@@ -1402,159 +1378,149 @@ nav {
       }
     }
     .sp {
-      color: map-get($theme-color, "themeRed");
+      color: map-get($theme-color, 'themeRed');
       font-weight: bold;
     }
   }
-}
-
-.range-slider-sec {
-  max-width: 1600px;
-  position: relative;
-  width: 100%;
-  margin: 0 auto 4rem auto;
-  @include tablet {
-    margin: 0 auto 3rem auto;
-  }
-  .d-flex {
-    @include tablet {
-      flex-wrap: wrap;
-      flex-direction: column;
-    }
-  }
-  .round-bordered {
-    background-color: map-get($theme-color, "themeRed");
-    max-width: 580px;
-    padding: 5px;
-  }
-  .slider-wrap-outer {
-    display: flex;
-    @include tablet {
-      display: block;
-    }
-  }
-  .slider-wrap {
-    width: 10%;
+  .range-slider-sec {
+    // max-width: 1600px;
     position: relative;
+    width: 100%;
+    margin: 0 auto 4rem auto;
     @include tablet {
-      width: 90%;
-      // height: 50px;
-      // background-color: #ffdd11;
-      // border: 1px solid red;
-      // position: relative;
-
-      margin: auto;
+      margin: 0 auto 3rem auto;
     }
-  }
-  .slider-wrap.disable {
-    &::after {
-      @include pseudo(absolute, transparent);
-      @include size(100%, calc(100% + 30px));
-      top: -15px;
-      z-index: 10;
-    }
-  }
-  .snowball-wrap {
-    position: absolute;
-    bottom: 14px;
-    // left: 0;
-    // right: 40px;
-    @include tablet {
-      // width: 100px;
-    }
-    .snow-people {
-      width: 80px;
-      overflow: hidden;
-      height: 187px;
-      position: absolute;
-      bottom: 0;
-      left: -50px;
+    .d-flex {
       @include tablet {
-        width: 50px;
-        height: 117px;
-        left: -36px;
+        flex-wrap: wrap;
+        flex-direction: column;
       }
-      @include mobile {
-        width: 40px;
-        height: 94px;
-        left: -30px;
+    }
+    .round-bordered {
+      background-color: map-get($theme-color, 'themeRed');
+      max-width: 580px;
+      padding: 5px;
+    }
+    .slider-wrap-outer {
+      display: flex;
+      @include tablet {
+        display: block;
       }
-      img {
-        width: 400px;
+    }
+    .slider-wrap {
+      width: 10%;
+      position: relative;
+      @include tablet {
+        width: 90%;
+        margin: 10px auto;
+      }
+    }
+    .slider-wrap.disable {
+      &::after {
+        @include pseudo(absolute, transparent);
+        @include size(100%, calc(100% + 30px));
+        top: -15px;
+        z-index: 10;
+        left: 0;
+      }
+    }
+    .snowball-wrap {
+      position: absolute;
+      bottom: 14px;
+      .snow-people {
+        width: 80px;
+        overflow: hidden;
+        height: 187px;
         position: absolute;
-        max-width: none;
+        bottom: 0;
+        left: -50px;
         @include tablet {
-          width: 250px;
+          width: 50px;
+          height: 117px;
+          left: -36px;
         }
         @include mobile {
-          width: 200px;
+          width: 40px;
+          height: 94px;
+          left: -30px;
+        }
+        img {
+          width: 400px;
+          position: absolute;
+          max-width: none;
+          left: 0;
+          @include tablet {
+            width: 250px;
+          }
+          @include mobile {
+            width: 200px;
+          }
+        }
+        .active {
+          animation: snowPeople 2.2s steps(4) infinite;
         }
       }
-      .active {
-        animation: snowPeople 2.2s steps(4) infinite;
+
+      #snow-ball {
+        position: relative;
+        z-index: 2;
+        animation: snowRoll 7s infinite;
       }
     }
 
-    #snow-ball {
-      position: relative;
-      z-index: 2;
-      // transition: all ease 0.8s;
-      animation: snowRoll 7s infinite;
-    }
-  }
-
-  #snow-bubble {
-    display: none;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: map-get($theme-color, "darkBlue");
-    position: absolute;
-    // right: 20%;
-    bottom: 60px;
-    max-width: 380px;
-    font-size: 20px;
-    &:after {
-      @include pseudo(absolute, transparent);
-      @include size(0px, 0px);
-      border-style: solid;
-      border-width: 20px 0 20px 22px;
-      border-color: transparent transparent transparent
-        map-get($theme-color, "darkBlue");
-      right: -18px;
-      top: calc(50% - 20px);
+    #snow-bubble {
+      display: none;
+      padding: 10px 3px;
+      border-radius: 10px;
+      background-color: map-get($theme-color, 'darkBlue');
+      position: absolute;
+      bottom: 60px;
+      max-width: 422px;
+      font-size: 20px;
+      &:after {
+        @include pseudo(absolute, transparent);
+        @include size(0px, 0px);
+        border-style: solid;
+        border-width: 20px 0 20px 22px;
+        border-color: transparent transparent transparent
+          map-get($theme-color, 'darkBlue');
+        right: -18px;
+        top: calc(50% - 20px);
+        @include smDesktop {
+          display: none;
+        }
+      }
       @include smDesktop {
-        display: none;
+        bottom: unset;
+        top: 60px;
+        padding: 4px;
+        right: unset;
+        font-size: 16px;
+        left: 60px;
+        max-height: 95px;
+      }
+      @include mobile {
+        font-size: 12px;
+        top: 40px;
+        max-width: 220px;
+      }
+      .sp {
+        color: #ffe57d;
       }
     }
-    @include smDesktop {
-      bottom: unset;
-      top: 60px;
-      padding: 4px;
-      right: unset;
-      font-size: 16px;
-      left: 60px;
-    }
-    @include mobile {
-      font-size: 12px;
-      top: 40px;
-      max-width: 220px;
-    }
-    .sp {
-      color: #ffe57d;
-    }
-  }
 
-  .snowball-wrap.ani1 {
-    animation: snowAxisX1 7s 1 forwards;
-  }
-  .snowball-wrap.ani3 {
-    animation: snowAxisX3 7s 1 forwards;
-  }
-  .snowball-wrap.ani5 {
-    animation: snowAxisX5 7s 1 forwards;
-  }
-  .snowball-wrap.ani10 {
-    animation: snowAxisX10 7s 1 forwards;
+    .snowball-wrap.ani1 {
+      animation: snowAxisX1 7s 1 forwards;
+    }
+    .snowball-wrap.ani3 {
+      animation: snowAxisX3 7s 1 forwards;
+    }
+    .snowball-wrap.ani5 {
+      animation: snowAxisX5 7s 1 forwards;
+    }
+    .snowball-wrap.ani10 {
+      animation: snowAxisX10 7s 1 forwards;
+    }
   }
 }
 
@@ -1576,13 +1542,29 @@ nav {
     height: 330px;
   }
   .accu-profit-p {
-    position: relative;
-    left: 80px;
+    position: absolute;
+    left: calc(10% + 80px);
+    @include mdDesktop {
+      left: 80px;
+    }
+    @include tablet {
+      position: relative;
+      left: -150px;
+      // left: 50px;
+    }
+    @include mobile {
+      // position: relative;
+      left: 0px;
+    }
     &:after {
       @include size(65px, 4px);
-      @include pseudo(absolute, #bbbf25);
+      @include pseudo(absolute, #15c1bf);
       left: -80px;
       top: 12px;
+      @include tablet {
+        @include size(35px, 4px);
+        left: -45px;
+      }
     }
     #accu-profit {
       color: #d3661c;
@@ -1754,7 +1736,7 @@ nav {
     cursor: pointer;
     outline: none;
     border-radius: 50%;
-    background: map-get($theme-color, "wh");
+    background: map-get($theme-color, 'wh');
     border: 6px solid #dd7737;
     box-sizing: border-box;
     z-index: 9;
@@ -1800,19 +1782,46 @@ svg {
       font-size: 12px;
     }
   }
-  .axis-x {
-    @include mobile {
-      transform: rotate(-25deg) translateY(12px);
+  .tick {
+    &:first-of-type {
+      .axis-x {
+        @include mobile {
+          transform: translate(-10px, 0px);
+        }
+      }
     }
+  }
+  .axis-x {
+    // @include mobile {
+    //   transform: rotate(-15deg);
+    // }
   }
 }
 
 // tooltip
 .d3-tip {
-  background: #faaa00;
-  padding: 0 4px;
-  color: map-get($theme-color, "wh");
+  background: #d48a12;
+  padding: 6px;
+  color: map-get($theme-color, 'wh');
   border-radius: 10px;
+  line-height: 1.2rem;
+  font-size: 24px;
+  z-index: 20;
+  font-weight: bold;
+  width: 326px;
+  @include tablet {
+    font-size: 20px;
+    padding: 4px 2px;
+    text-align: center;
+    width: 262px;
+  }
+  @include mobile {
+    width: 196px;
+  }
+  @include mobile {
+    font-size: 14px;
+    word-break: break-all;
+  }
 }
 
 // slider
@@ -1843,28 +1852,133 @@ svg {
     width: 86%;
   }
 
+  .slick-next:before {
+    @include tablet {
+      // left: none;
+      left: 0;
+    }
+    @include mobile {
+      // left: none;
+      // right: 5px;
+      left: unset;
+      right: 8px;
+    }
+  }
+
+  .slick-next,
+  .slick-prev {
+    &:before {
+      @include mobile {
+        top: -2px;
+      }
+    }
+    &:after {
+      @include pseudo(absolute, map-get($theme-color, 'wh'));
+      @include size(52px, 52px);
+      border-radius: 200px;
+      z-index: -1;
+      top: -2px;
+      @include mdDesktop {
+        @include size(42px, 42px);
+      }
+      @include tablet {
+        @include size(34px, 34px);
+      }
+      @include mobile {
+        @include size(24px, 24px);
+      }
+    }
+  }
+  .slick-prev {
+    &:before {
+      background: url('../img/pageItem/perv-arrow-d.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: -24px;
+      @include mdDesktop {
+        left: -12px;
+      }
+      @include tablet {
+        left: -2px;
+      }
+      @include mobile {
+        left: 8px;
+      }
+    }
+    &:after {
+      left: -30px;
+      @include mdDesktop {
+        left: -16px;
+      }
+      @include tablet {
+        left: -6px;
+      }
+      @include mobile {
+        left: 5px;
+      }
+    }
+  }
+  .slick-next {
+    &:before {
+      background: url('../img/pageItem/next-arrow-d.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      right: -24px;
+      @include mdDesktop {
+        right: -18px;
+      }
+      @include tablet {
+        left: unset;
+        right: -2px;
+      }
+      @include mobile {
+        right: 8px;
+      }
+    }
+    &:after {
+      right: -30px;
+      left: unset;
+      @include mdDesktop {
+        right: -16px;
+      }
+      @include tablet {
+        right: -6px;
+      }
+      @include mobile {
+        right: 5px;
+      }
+    }
+  }
+
   .single-etf-slide {
     position: relative;
     border-radius: 12px;
-    background-color: map-get($theme-color, "wh");
+    background-color: map-get($theme-color, 'wh');
     padding: 1.5rem 1rem;
     text-align: center;
     @include tablet {
       padding: 1rem 0.5rem;
     }
-    // @include mdMobile {
-    //   min-height: 618px;
-    // }
     ul {
       list-style-type: disc;
       text-align: left;
       padding: 0 0 0 1rem;
+      font-size: 24px;
+      @include tablet {
+        min-height: 146px;
+      }
       @include mobile {
         min-height: 128px;
       }
       @include mdMobile {
         min-height: 136px;
         margin: 0;
+      }
+      @include smMobile {
+        min-height: 154px;
+      }
+      @media (max-width: 360px) {
+        min-height: 164px;
       }
     }
     p {
@@ -1875,7 +1989,6 @@ svg {
     }
     .single-etf-title {
       display: inline-block;
-      background-color: #ddd;
       padding: 0.5rem 2rem;
       text-align: center;
       margin: 0 0 20px 0;
@@ -1884,6 +1997,22 @@ svg {
         width: 90%;
         padding: 0.5rem 0;
       }
+    }
+    .tech-title {
+      background-color: map-get($theme-color, 'tech');
+    }
+    .bio-title {
+      background-color: #6615b5;
+    }
+    .asia-title {
+      background-color: map-get($theme-color, 'asia');
+    }
+
+    .energy-title {
+      background-color: map-get($theme-color, 'energy');
+    }
+    .nu-title {
+      background-color: map-get($theme-color, 'nu');
     }
     .single-etf-title.show-mobile {
       display: none;
@@ -1980,17 +2109,18 @@ svg {
       transition: all ease 0.2s;
       letter-spacing: 2px;
       &:hover {
-        border: map-get($theme-color, "themeRed") 2px solid;
-        color: map-get($theme-color, "themeRed");
+        border: map-get($theme-color, 'themeRed') 2px solid;
+        color: map-get($theme-color, 'themeRed');
         background-color: transparent;
       }
       @include tablet {
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
       @include mobile {
         display: block;
         padding: 0.5rem 0;
         width: 100%;
+        font-size: 1rem;
       }
     }
   }
@@ -1999,32 +2129,6 @@ svg {
   }
   .slick-next {
     right: -30px;
-  }
-
-  #tech-genre {
-    .single-etf-title {
-      background-color: map-get($theme-color, "tech");
-    }
-  }
-  #bio-genre {
-    .single-etf-title {
-      background-color: #6615b5;
-    }
-  }
-  #asia-genre {
-    .single-etf-title {
-      background-color: map-get($theme-color, "asia");
-    }
-  }
-  #energy-genre {
-    .single-etf-title {
-      background-color: map-get($theme-color, "energy");
-    }
-  }
-  #nu-genre {
-    .single-etf-title {
-      background-color: map-get($theme-color, "nu");
-    }
   }
 }
 
@@ -2104,30 +2208,50 @@ svg {
     }
     &:nth-of-type(2) {
       background-color: #d5f7f3;
+      @include tablet {
+        order: 3;
+        -ms-flex-order: 3;
+      }
       .round-bordered {
-        background-color: map-get($theme-color, "energy");
+        background-color: map-get($theme-color, 'energy');
       }
     }
     &:nth-of-type(3) {
       background-color: #d2f2ff;
+      @include tablet {
+        order: 1;
+        -ms-flex-order: 1;
+      }
       .round-bordered {
-        background-color: map-get($theme-color, "tech");
+        background-color: map-get($theme-color, 'tech');
       }
     }
     &:nth-of-type(4) {
       background-color: #d6f4b0;
+      @include tablet {
+        order: 4;
+        -ms-flex-order: 4;
+      }
       .round-bordered {
-        background-color: map-get($theme-color, "nu");
+        background-color: map-get($theme-color, 'nu');
       }
     }
     &:nth-of-type(5) {
       background-color: #ebdefc;
+      @include tablet {
+        order: 2;
+        -ms-flex-order: 2;
+      }
       .round-bordered {
-        background-color: map-get($theme-color, "bioPurple");
+        background-color: map-get($theme-color, 'bioPurple');
       }
     }
     &:nth-of-type(6) {
       background-color: #f7e88b;
+      @include tablet {
+        order: 5;
+        -ms-flex-order: 5;
+      }
       .round-bordered {
         background-color: #df6e36;
       }
@@ -2148,7 +2272,7 @@ svg {
 .chart-part {
   .chart-cont {
     position: relative;
-    background-color: map-get($theme-color, "grayY");
+    background-color: map-get($theme-color, 'grayY');
     padding: 20px 0;
     max-width: 1160px;
     display: flex;
@@ -2188,7 +2312,7 @@ svg {
   }
 
   .quadrant-text {
-    color: map-get($theme-color, "themeBlue");
+    color: map-get($theme-color, 'themeBlue');
     position: absolute;
     z-index: 10;
     &:first-of-type {
@@ -2244,14 +2368,13 @@ svg {
   .slick-arrow {
     top: calc(100% + 14px);
     @include size(36px, 36px);
-    border-radius: 35px;
-    background-color: map-get($theme-color, "wh");
+    // border-radius: 35px;
+    background-color: map-get($theme-color, 'wh');
   }
   .slick-prev {
     left: calc(50% - 64px);
-
     &:before {
-      background: url("../img/pageItem/perv-arrow-d.svg");
+      background: url('../img/pageItem/perv-arrow-d.svg');
       background-repeat: no-repeat;
       width: 28px;
       height: 28px;
@@ -2262,12 +2385,15 @@ svg {
   .slick-next {
     right: calc(50% - 64px);
     &:before {
-      background: url("../img/pageItem/next-arrow-d.svg");
+      background: url('../img/pageItem/next-arrow-d.svg');
       background-repeat: no-repeat;
       width: 28px;
       height: 28px;
       right: -3px;
       top: 3px;
+      @include tablet {
+        left: 10px;
+      }
     }
   }
   .etf-row {
@@ -2276,7 +2402,10 @@ svg {
     border-radius: 10px;
     margin: 3rem 0;
     @include semiLgDesktop {
-      padding: 2rem 2rem 5rem 2rem;
+      padding: 2rem 1.5rem 5rem 1.5rem;
+    }
+    @include mobile {
+      padding: 2rem 1rem 5rem 1rem;
     }
     .etf-group {
       max-width: 1200px;
@@ -2291,13 +2420,17 @@ svg {
     }
     h3 {
       border-radius: 15px 15px 0 0;
+      font-size: 32px;
+      @include mobile {
+        font-size: 23px;
+      }
     }
     .round-bordered {
       padding: 0.2rem 0.6rem;
       margin-bottom: 30px;
       display: inline-block;
       &:hover {
-        color: map-get($theme-color, "wh");
+        color: map-get($theme-color, 'wh');
       }
       img {
         width: 10px;
@@ -2334,7 +2467,7 @@ svg {
 
       // 第一組的arrow
       .slick-dots li.slick-active button:before {
-        color: map-get($theme-color, "tech");
+        color: map-get($theme-color, 'tech');
       }
       .slick-prev {
         left: calc(50% - 124px);
@@ -2348,20 +2481,20 @@ svg {
         &:after {
           width: 330px;
           left: calc(50% - 160px);
-          background-color: map-get($theme-color, "tech");
+          background-color: map-get($theme-color, 'tech');
         }
         &:before {
           width: 4px;
           left: calc(50% - 170px);
           z-index: 2;
-          background-color: map-get($theme-color, "tech");
+          background-color: map-get($theme-color, 'tech');
         }
       }
       .type-info {
-        color: map-get($theme-color, "tech");
+        color: map-get($theme-color, 'tech');
       }
       .white-text {
-        background-color: map-get($theme-color, "tech");
+        background-color: map-get($theme-color, 'tech');
       }
     }
     // bio
@@ -2383,33 +2516,36 @@ svg {
         &:after {
           width: 330px;
           left: calc(50% - 160px);
-          background-color: map-get($theme-color, "bioPurple");
+          background-color: map-get($theme-color, 'bioPurple');
         }
         &:before {
           width: 4px;
           left: calc(50% - 170px);
           z-index: 2;
-          background-color: map-get($theme-color, "bioPurple");
+          background-color: map-get($theme-color, 'bioPurple');
         }
       }
       .type-info {
-        color: map-get($theme-color, "bioPurple");
+        color: map-get($theme-color, 'bioPurple');
       }
       .white-text {
-        background-color: map-get($theme-color, "bioPurple");
+        background-color: map-get($theme-color, 'bioPurple');
       }
       // 第二組的arrow
       .slick-dots li.slick-active button:before {
-        color: transparent;
-        @include lgDesktop {
-          color: map-get($theme-color, "bioPurple");
-        }
+        color: map-get($theme-color, 'bioPurple');
       }
       .slick-prev {
         left: calc(50% - 94px);
+        @include tablet {
+          left: calc(50% - 124px);
+        }
       }
       .slick-next {
         right: calc(50% - 94px);
+        @include tablet {
+          right: calc(50% - 124px);
+        }
       }
     }
 
@@ -2433,23 +2569,23 @@ svg {
         &:after {
           width: 330px;
           left: calc(50% - 160px);
-          background-color: map-get($theme-color, "natureTeal");
+          background-color: map-get($theme-color, 'natureTeal');
         }
         &:before {
           width: 4px;
           left: calc(50% - 170px);
           z-index: 2;
-          background-color: map-get($theme-color, "natureTeal");
+          background-color: map-get($theme-color, 'natureTeal');
         }
       }
       .type-info {
-        color: map-get($theme-color, "natureTeal");
+        color: map-get($theme-color, 'natureTeal');
       }
       .white-text {
-        background-color: map-get($theme-color, "natureTeal");
+        background-color: map-get($theme-color, 'natureTeal');
       }
       .slick-dots li.slick-active button:before {
-        color: map-get($theme-color, "natureTeal");
+        color: map-get($theme-color, 'natureTeal');
       }
       .slick-prev {
         left: calc(50% - 164px);
@@ -2477,23 +2613,23 @@ svg {
         &:after {
           width: 330px;
           left: calc(50% - 160px);
-          background-color: map-get($theme-color, "nuGreen");
+          background-color: map-get($theme-color, 'nuGreen');
         }
         &:before {
           width: 4px;
           left: calc(50% - 170px);
           z-index: 2;
-          background-color: map-get($theme-color, "nuGreen");
+          background-color: map-get($theme-color, 'nuGreen');
         }
       }
       .type-info {
-        color: map-get($theme-color, "nuGreen");
+        color: map-get($theme-color, 'nuGreen');
       }
       .white-text {
-        background-color: map-get($theme-color, "nuGreen");
+        background-color: map-get($theme-color, 'nuGreen');
       }
       .slick-dots li.slick-active button:before {
-        color: map-get($theme-color, "nuGreen");
+        color: map-get($theme-color, 'nuGreen');
       }
       .slick-prev {
         left: calc(50% - 124px);
@@ -2520,23 +2656,23 @@ svg {
         &:after {
           width: 330px;
           left: calc(50% - 160px);
-          background-color: map-get($theme-color, "asiaOrange");
+          background-color: map-get($theme-color, 'asiaOrange');
         }
         &:before {
           width: 4px;
           left: calc(50% - 170px);
           z-index: 2;
-          background-color: map-get($theme-color, "asiaOrange");
+          background-color: map-get($theme-color, 'asiaOrange');
         }
       }
       .type-info {
-        color: map-get($theme-color, "asiaOrange");
+        color: map-get($theme-color, 'asiaOrange');
       }
       .white-text {
-        background-color: map-get($theme-color, "asiaOrange");
+        background-color: map-get($theme-color, 'asiaOrange');
       }
       .slick-dots li.slick-active button:before {
-        color: map-get($theme-color, "asiaOrange");
+        color: map-get($theme-color, 'asiaOrange');
       }
       .slick-prev {
         left: calc(50% - 144px);
@@ -2546,7 +2682,7 @@ svg {
       }
     }
     .single-etf {
-      background-color: map-get($theme-color, "wh");
+      background-color: map-get($theme-color, 'wh');
     }
   }
 }
@@ -2597,7 +2733,7 @@ svg {
 }
 
 .notice-wrap {
-  background-color: map-get($theme-color, "wh");
+  background-color: map-get($theme-color, 'wh');
 
   .notice-title {
     cursor: pointer;
@@ -2653,13 +2789,26 @@ svg {
 // over-write slider style
 .slick-arrow {
   @include size(28px, 52px);
+  // background-color: map-get($theme-color, 'wh');
+  border-radius: 65px;
   z-index: 10;
   @include mobile {
+    // @include size(17px, 30px);
     @include size(20px, 37px);
   }
 }
 
 // .slick-prev {
+//   border: 2px solid red;
+//   &:after {
+//     @include pseudo(absolute, 'fff');
+//     background-color: #fff;
+//     z-index: -1;
+//     width: 100px;
+//     height: 100px;
+//     left: 0;
+//     position: absolute;
+//   }
 //   @include mobile {
 //   }
 // }
@@ -2672,39 +2821,29 @@ svg {
 .slick-prev:before,
 .slick-next:before {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   animation: arrowOpacity 3s infinite;
-  @include size(36px, 52px);
-  @include mobile {
-    @include size(20px, 37px);
+  @include size(32px, 48px);
+  // @include size(36px, 52px);
+  @include mdDesktop {
+    @include size(32px, 40px);
   }
-}
-.slick-prev:before {
-  background: url("../img/pageItem/perv-arrow.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  left: -18px;
-  @include mobile {
-    left: 5px;
+  @include tablet {
+    @include size(22px, 32px);
   }
-}
-.slick-next:before {
-  background: url("../img/pageItem/next-arrow.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  right: -18px;
   @include mobile {
-    right: 5px;
+    // @include size(20px, 37px);
+    @include size(14px, 28px);
   }
 }
 
 .slick-dots {
   li button:before {
-    color: darken(map-get($theme-color, "bk"), 10);
+    color: darken(map-get($theme-color, 'bk'), 10);
   }
   li.slick-active button:before {
-    color: map-get($theme-color, "themeRed");
+    color: map-get($theme-color, 'wh');
   }
 }
 
@@ -2726,11 +2865,48 @@ svg {
 }
 
 .white-text {
-  color: map-get($theme-color, "wh");
+  color: map-get($theme-color, 'wh');
 }
 
 .red-text {
   color: #ff0000;
+}
+
+.max-1600 {
+  max-width: 1600px;
+}
+
+.whatIsIndex {
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  &:after {
+    @include size(36px, 36px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 40px;
+    z-index: 1;
+    background-color: #767777;
+    animation: bgCChanging 0.6s infinite;
+    content: '';
+  }
+  @include lgTablet {
+    max-width: 680px;
+    margin: auto;
+  }
+  span {
+    top: 2px;
+    position: relative;
+  }
+  .quest-icon {
+    position: relative;
+    top: 0;
+    left: 0;
+    @include size(36px, 36px);
+    z-index: 2;
+    animation: scaling 0.6s infinite;
+  }
 }
 
 // if set .hide{ display:none; } will make slick-slider weird appearance
@@ -2792,7 +2968,7 @@ li.icon-list {
     @include pseudo(absolute, transparent);
     width: 20px;
     height: 20px;
-    background: url("../img/pageItem/modal/sword.svg");
+    background: url('../img/pageItem/modal/sword.svg');
     background-size: 100%;
     background-repeat: no-repeat;
     left: -28px;
@@ -2803,30 +2979,44 @@ li.icon-list {
   position: fixed;
   right: 20px;
   bottom: 5%;
-  display: flex;
   flex-direction: column;
   padding: 4px;
-  width: 110px;
-  height: 110px;
+  @include size(110px, 110px);
+  line-height: 1.5rem;
   border-radius: 200px;
   background-color: #f76168;
-  color: #d5f7f3;
-  font-size: 17px;
+  // color: #d5f7f3;
+  color: #fff;
+  font-size: 30px;
   align-items: center;
   justify-content: center;
   z-index: 12;
   border: 4px solid #f7e88b;
   animation: 2s infinite cubic-bezier(0.175, 0.885, 0.32, 1.275) sideBtnAni;
-  img {
-    width: 70px;
+  @include mobile {
+    @include size(86px, 86px);
+    font-size: 18px;
+    right: 10px;
   }
+  // img {
+  //   width: 70px;
+  //   @include mobile {
+  //     width: 40px;
+  //   }
+  // }
 }
 
 footer {
-  background-color: map-get($theme-color, "darkBlue");
+  background-color: #254a91;
   padding: 15px 0;
+  font-size: 15px;
+  a {
+    &:hover {
+      color: map-get($theme-color, 'wh');
+    }
+  }
   @include mdDesktop {
-    font-size: 16px;
+    // font-size: 16px;
   }
 }
 
@@ -2849,7 +3039,7 @@ footer {
     margin: 6px 0;
     border-radius: 30px;
     background-color: #eaa639;
-    border: 2px solid map-get($theme-color, "wh");
+    border: 2px solid map-get($theme-color, 'wh');
     transition: all ease 0.5s;
     &:hover {
       background-color: red;
@@ -2869,7 +3059,7 @@ footer {
     font-size: 16px;
     width: 112px;
     top: -6px;
-    color: map-get($theme-color, "wh");
+    color: map-get($theme-color, 'wh');
     background: #848484;
     text-align: center;
     border-radius: 10px;
@@ -2878,6 +3068,9 @@ footer {
 
 //-ie specific
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .slick-next::after {
+    left: none;
+  }
   .kv-section .kv-slogan-wrap .kv-slogan-main::after {
     display: none;
   }

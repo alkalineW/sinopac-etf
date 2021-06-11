@@ -2,6 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-TW" lang="zh-TW">
 
 <head>
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-WQNGCJN');</script>
+	<!-- End Google Tag Manager -->
 	<meta charset="utf-8" />
 	<title>永豐 ETF</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=EDGE" />
@@ -29,6 +39,11 @@
 </head>
 
 <body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQNGCJN" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
 	<div class="container-fuild navbar-wrap">
 		<header>
 			<!-- remove fixed-top on nav element -->
@@ -43,27 +58,31 @@
 							class="iconbar"></span><span class="iconbar"></span></div>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item" data-target="etf-main-benefits">
-							<span class="nav-link">ETF介紹</span>
+					<ul class="navbar-nav ml-auto d-flex">
+						<li class="nav-item text-center" data-target="etf-main-benefits">
+							<span class="nav-link font-weight-bold">ETF優勢</span>
 						</li>
-						<li class="nav-item" data-target="classic-example">
-							<span class="nav-link">巴菲特的操作</span>
+						<li class="nav-item text-center" data-target="classic-example">
+							<span class="nav-link font-weight-bold">滾雪球操作</span>
 						</li>
-						<li class="nav-item" data-target="etf-slider-sec">
-							<span class="nav-link">ETF趨勢</span>
+						<li class="nav-item text-center" data-target="etf-slider-sec">
+							<span class="nav-link font-weight-bold">ETF趨勢</span>
 						</li>
-						<li class="nav-item" data-target="etf-lab-wrap">
-							<span class="nav-link">ETF實驗室</span>
+						<li class="nav-item text-center" data-target="etf-lab-wrap">
+							<span class="nav-link font-weight-bold">ETF實驗室</span>
 						</li>
-						<li class="nav-item" data-target="article-sec">
-							<span class="nav-link">知識文章
+						<li class="nav-item text-center" data-target="article-sec">
+							<span class="nav-link font-weight-bold">知識文章
 							</span>
 						</li>
-						<li class="nav-item">
-							<span class="nav-link">數位開戶
+						<!-- <a href=""
+							target="_blank"> -->
+						<li class="nav-item text-center"
+							data-target="https://apply.sinopac.com/OpenAccount/OpenAccount/Login?openExternalBrowser=1&tickset=SIN020&tko=ETFMKT&utm_source=mgm&utm_medium=links&utm_term=non-paid&utm_content=SIN020-ETFMKT&utm_campaign=mgm#">
+							<span class="nav-link font-weight-bold">數位開戶
 							</span>
 						</li>
+						<!-- </a> -->
 					</ul>
 				</div>
 			</nav>
@@ -73,7 +92,7 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<!-- kv -->
-				<section id="kv" class="kv-section">
+				<section id="kv" class="kv-section sec-elm">
 					<div class="kv-wrap">
 						<img class="bg-shape kv-deco" src="./assets/img/pageItem/kv/kv-bg-shape.svg" alt="" />
 						<img class="cloud kv-deco" src="./assets/img/pageItem/kv/kv-cloud.svg" alt="" />
@@ -125,13 +144,14 @@
 						</div>
 					</div>
 					<div class="kv-cta-wrap text-center">
-						<a href="" class="rounded-anchor text-center" target="_blank">
+						<div data-target="etf-main-benefits"
+							class="rounded-anchor text-center scroll-to-etf-main-benefits">
 							<span class="white-text font-weight-bold">立即開始</span>
-						</a>
+						</div>
 					</div>
 				</section>
 				<!-- etf benefits -->
-				<section id="etf-main-benefits" class="etf-main-benefits">
+				<section id="etf-main-benefits" class="etf-main-benefits sec-elm">
 					<h2 class="text-center font-weight-bold">
 						投資ETF指數股票型基金好處多多
 					</h2>
@@ -147,17 +167,18 @@
 								買進一籃子標的
 							</h4>
 							<p class="text-left">
-								買進一檔ETF，就等同於買進該指數中的所有標的。
+								買進一檔ETF，就貼近投資該指數中的大部分標的。
 							</p>
 							<div data-toggle="collapse" data-target="#whatIsIndexContentMobile"
 								class="whatIsIndex show-tablet">
-								<img src="./assets/img/pageItem/what-icon.svg" alt="什麼是指數?" />
-								<span>什麼是指數?</span>
+								<img class="quest-icon d-inline-block" src="./assets/img/pageItem/what-icon.svg"
+									alt="什麼是指數?" />
+								<span class="d-inline-block">什麼是指數?</span>
 							</div>
 							<div id="whatIsIndexContentMobile" class="collapse">
 								<p class="text-left">
 									指數為反映追蹤市場或產業的概括數據。<br />
-									例如:S&P500指數就由美國500大企業股價組成，是記錄美國股市的平均記錄的重要指標。
+									例如:S&P500指數就由美國500大企業股價所組成，是美國股市平均紀錄的重要指標。
 								</p>
 							</div>
 						</div>
@@ -211,25 +232,26 @@
 					</div>
 					<div id="whatIsIndex" data-toggle="collapse" data-target="#whatIsIndexContent"
 						class="whatIsIndex hide-tablet">
-						<img src="./assets/img/pageItem/what-icon.svg" alt="什麼是指數?" />
-						<span>什麼是指數?</span>
+						<img class="quest-icon d-inline-block" src="./assets/img/pageItem/what-icon.svg" alt="什麼是指數?" />
+						<span class="d-inline-block">什麼是指數?</span>
 					</div>
 					<div id="whatIsIndexContent" class="collapse">
 						<p class="text-left">
 							指數為反映追蹤市場或產業的概括數據。<br />
-							例如:S&P500指數就由美國500大企業股價組成，是記錄美國股市的平均記錄的重要指標。
+							例如:S&P500指數就由美國500大企業股價所組成，是美國股市平均紀錄的重要指標。
 						</p>
 					</div>
 
-					<a href="" class="rounded-anchor text-center mx-auto" target="_blank">
+					<a href="https://mma.sinopac.com/mma/SinopacFundSearch/search/ETFIndex.aspx?trans=C1&utm_source=mma&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPageETFAREA&utm_campaign=ETF landingpage20210415"
+						target="_blank" class="rounded-anchor text-center mx-auto" target="_blank">
 						<span class="white-text font-weight-bold">立即線上交易</span>
 					</a>
 				</section>
-				<section id="classic-example" class="classic-example text-center">
+				<section id="classic-example" class="classic-example text-center sec-elm por">
 					<h2 class="text-center font-weight-bold">
-						巴菲特的操作
+						滾雪球操作
 					</h2>
-					<div class="d-flex">
+					<div class="d-flex max-1600 mx-auto">
 						<div class="left-col">
 							<p class="font-weight-bold">
 								請操控時光機<br />
@@ -241,95 +263,96 @@
 							<img src="./assets/img/pageItem/b-talk-update.png" alt="" />
 							<!-- remove id="speech-cont" on p -->
 							<p class="speech-bubble font-weight-bold text-left">
-								巴菲特自1993年-2018年推薦指數型投資高達14次<br>
-								他的核心心法為:長期投資+ETF<br>
-								現在你將與巴菲特坐上時光機，一起見證這趟滾雪球之旅
+								巴菲特於波克夏股東會議多次推薦：<br>
+								「長期投資+ETF」投資心法<br>
+								透過此邏輯，將S&P500指數進行歷史模擬會得到什麼樣的結果呢？
+								操縱時光機看看吧！
 							</p>
 							<!-- <span id="profit-rate">+83.77%</span> -->
 						</div>
 					</div>
-				</section>
-				<section id="range-slider-sec" class="range-slider-sec">
-					<!-- <h2 class="round-bordered white-text mx-auto text-center">
-						請操控時光機見證滾雪球奇蹟
-					</h2> -->
-					<div class="slider-wrap-outer">
-						<div class="slider-wrap">
-							<div class="range-slider-outter">
-								<div id="rangeSlider" class="sliderAmount">
-									<div class="ticks-wrap">
-										<span class="ticks-text font-weight-bold">十年前 <br />2011年
-										</span>
-										<span class="ticks-text font-weight-bold">五年前 <br />2016年
-										</span>
-										<span class="ticks-text font-weight-bold">三年前 <br />2018年
-										</span>
-										<span class="ticks-text font-weight-bold">一年前 <br />2020年
-										</span>
+
+					<!-- move to here -->
+					<div id="range-slider-sec" class="range-slider-sec max-1600">
+						<!-- <h2 class="round-bordered white-text mx-auto text-center">
+							請操控時光機見證滾雪球奇蹟
+						</h2> -->
+						<div class="slider-wrap-outer">
+							<div class="slider-wrap">
+								<div class="range-slider-outter">
+									<div id="rangeSlider" class="sliderAmount">
+										<div class="ticks-wrap">
+											<span class="ticks-text font-weight-bold">十年前 <br />2011年
+											</span>
+											<span class="ticks-text font-weight-bold">五年前 <br />2016年
+											</span>
+											<span class="ticks-text font-weight-bold">三年前 <br />2018年
+											</span>
+											<span class="ticks-text font-weight-bold">一年前 <br />2020年
+											</span>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<div class="range-slider-cont-wrap">
-							<p class="accu-profit-p font-weight-bold">
-								累積報酬率<span id="accu-profit">+83.77%</span>
-							</p>
-							<p class="font-weight-bold">
-								投資期間:<span id="year-span">5</span>年
-							</p>
-							<div class="range-slider-cont">
-								<div id="chart-one-ago" class="line-chart"></div>
-							</div>
-							<div class="range-slider-cont">
-								<div id="chart-three-ago" class="line-chart"></div>
-							</div>
-							<div class="range-slider-cont">
-								<div id="chart-five-ago" class="line-chart"></div>
-							</div>
-							<div class="range-slider-cont">
-								<div id="chart-ten-ago" class="line-chart"></div>
-							</div>
-							<!-- snow ball wrap -->
-							<div id="snowball-wrap" class="snowball-wrap">
-								<div class="snow-people">
-									<img src="./assets/img/pageItem/snow-walking.png" alt="" />
+							<div class="range-slider-cont-wrap por">
+								<p class="accu-profit-p font-weight-bold">
+									累積報酬率<span id="accu-profit">+83.77%</span>
+								</p>
+								<p class="font-weight-bold">
+									投資期間:<span id="year-span">5</span>年
+								</p>
+								<div class="range-slider-cont">
+									<div id="chart-one-ago" class="line-chart"></div>
 								</div>
-								<img id="snow-ball" src="./assets/img/pageItem/snowball.png" alt="" />
-							</div>
-							<div id="snow-bubble" class="white-text">
-							</div>
+								<div class="range-slider-cont">
+									<div id="chart-three-ago" class="line-chart"></div>
+								</div>
+								<div class="range-slider-cont">
+									<div id="chart-five-ago" class="line-chart"></div>
+								</div>
+								<div class="range-slider-cont">
+									<div id="chart-ten-ago" class="line-chart"></div>
+								</div>
+								<!-- snow ball wrap -->
+								<div id="snowball-wrap" class="snowball-wrap">
+									<div class="snow-people">
+										<img src="./assets/img/pageItem/snow-walking.png" alt="" />
+									</div>
+									<img id="snow-ball" src="./assets/img/pageItem/snowball.png" alt="" />
+								</div>
+								<div id="snow-bubble" class="white-text text-center">
+								</div>
 
+							</div>
 						</div>
 					</div>
-
-					<!-- old snow ball wrap position -->
 				</section>
 
-				<!--  -->
-				<section id="etf-slider-sec" class="etf-slider-sec">
+
+				<section id="etf-slider-sec" class="etf-slider-sec sec-elm">
 					<h2 class="text-center white-text font-weight-bold">
 						ETF的趨勢在這邊
 					</h2>
 					<!-- 6 genre slider -->
 					<div class="etf-slider-outer">
 						<div class="etf-slider-wrap">
-							<div class="single-etf-slide" id="tech-genre">
+							<div class="single-etf-slide">
 								<!-- desktop title -->
 								<h3
-									class="single-etf-title round-bordered mx-auto white-text font-weight-bold hide-mobile">
+									class="tech-title single-etf-title round-bordered mx-auto white-text font-weight-bold hide-mobile">
 									科技型ETF：鎖定未來生活
 								</h3>
 								<!-- mobile title -->
 								<h3
-									class="single-etf-title round-bordered mx-auto white-text font-weight-bold show-mobile">
+									class="tech-title single-etf-title round-bordered mx-auto white-text font-weight-bold show-mobile">
 									科技型ETF：<br>
 									鎖定未來生活
 								</h3>
-								<p class="text-center hide-mobile">
+								<p class="text-center hide-tablet">
 									5G、電動車成為可見的未來，接下來十年，會是哪項科技成為新焦點?<br />
 									科技型ETF，囊括知名科技公司，人工智慧、太空科技都在你的掌握中
 								</p>
-								<ul class="show-mobile">
+								<ul class="show-tablet font-weight-bold">
 									<li>
 										5G、電動車成為可見的未來，接下來十年，會是哪項科技成為新焦點?
 									</li>
@@ -359,41 +382,43 @@
 									data-target="tech-etf-group" href="">
 									立即挑選科技型ETF</buton>
 							</div>
-							<div class="single-etf-slide" id="bio-genre">
+							<div class="single-etf-slide">
 								<!-- desktop title -->
 								<h3
-									class="single-etf-title round-bordered mx-auto white-text font-weight-bold hide-mobile">
-									生技健護型ETF：後疫情下大勢
+									class="bio-title single-etf-title round-bordered mx-auto white-text font-weight-bold hide-mobile">
+									ARK主動型ETF：破壞式創新投資
 								</h3>
 								<!-- mobile title -->
 								<h3
-									class="single-etf-title round-bordered mx-auto white-text font-weight-bold show-mobile">
-									生技健護型ETF：<br>
-									後疫情下大勢
+									class="bio-title single-etf-title round-bordered mx-auto white-text font-weight-bold show-mobile">
+									ARK主動型ETF：<br>
+									破壞式創新投資
 								</h3>
-								<p class="text-center hide-mobile">
-									疫情爆發後，疫苗研發、疾病看護以及健康管理成為投資新趨勢，<br />
-									鎖定疫情商機，就該投資生技健護型ETF。
+								<p class="text-center hide-tablet">
+									以破壞式創新為核心，採用獨到選股策略，<br>
+									投資多家具備高度成長潛力新創公司。
 								</p>
-								<ul class="show-mobile">
+								<ul class="show-tablet font-weight-bold">
 									<li>
-										疫情爆發後，疫苗研發、疾病看護以及健康管理成為投資新趨勢
+										以破壞式創新為核心，採用獨到選股策略。
 									</li>
-									<li>鎖定疫情商機，就該投資生技健護型ETF</li>
+									<li>
+										投資多家具備高度成長潛力新創公司。
+									</li>
 								</ul>
 								<div class="d-flex illustration-col">
 									<div class="left-icon d-flex  font-weight-bold text-left">
 										<div class="icon-col d-flex">
 											<img src="./assets/img/pageItem/slider/bio1.svg" />
-											<span class="">藥品</span>
+											<span class="">生物基因</span>
 										</div>
 										<div class="icon-col d-flex">
 											<img src="./assets/img/pageItem/slider/bio2.svg" />
-											<span class="">疫苗</span>
+											<span class="">物聯網</span>
 										</div>
 										<div class="icon-col d-flex">
 											<img src="./assets/img/pageItem/slider/bio3.svg" />
-											<span class="">疾病</span>
+											<span class="">金融科技</span>
 										</div>
 									</div>
 									<div class="right-illustration-col">
@@ -402,30 +427,30 @@
 								</div>
 
 								<buton class="btn btn-outline-primary mx-auto font-weight-bold"
-									data-target="bio-etf-group">立即挑選生技健護型ETF
+									data-target="bio-etf-group">立即挑選ARK主動型ETF
 								</buton>
 							</div>
-							<div class="single-etf-slide" id="energy-genre">
+							<div class="single-etf-slide">
 								<!-- desktop title -->
 								<h3
-									class="single-etf-title round-bordered mx-auto white-text font-weight-bold hide-mobile">
+									class="energy-title single-etf-title round-bordered mx-auto white-text font-weight-bold hide-mobile">
 									天然資源型ETF：當通膨來臨的最佳解方!
 								</h3>
 								<!-- mobile title -->
 								<h3
-									class="single-etf-title round-bordered mx-auto white-text font-weight-bold show-mobile">
+									class="energy-title single-etf-title round-bordered mx-auto white-text font-weight-bold show-mobile">
 									天然資源型ETF：<br>
 									當通膨來臨的最佳解方!
 								</h3>
-								<p class="text-center hide-mobile">
+								<p class="text-center hide-tablet">
 									裝飾用的黃金、發電用的太陽、開車用的石油，還有每日一杯的咖啡，<br />
 									從日常中找尋投資機會，選天然資源型ETF準沒錯。
 								</p>
-								<ul class="show-mobile">
+								<ul class="show-tablet font-weight-bold">
 									<li>
-										裝飾用的黃金、發電用的太陽、開車用的石油，還有每日一杯的咖啡
+										裝飾用的黃金、發電用的太陽、開車用的石油，還有每日一杯的咖啡～
 									</li>
-									<li>從日常中找尋投資機會，選天然資源型ETF準沒錯</li>
+									<li>從日常生活中找尋投資機會，選天然資源型ETF準沒錯！</li>
 								</ul>
 
 								<div class="d-flex illustration-col">
@@ -453,27 +478,27 @@
 							</div>
 
 
-							<div class="single-etf-slide" id="nu-genre">
+							<div class="single-etf-slide">
 								<!-- desktop title -->
 								<h3
-									class="single-etf-title round-bordered mx-auto white-text font-weight-bold hide-mobile">
+									class="nu-title single-etf-title round-bordered mx-auto white-text font-weight-bold hide-mobile">
 									區域型新興國家ETF：廣度投資分散風險
 								</h3>
 								<!-- mobile title -->
 								<h3
-									class="single-etf-title round-bordered mx-auto white-text font-weight-bold show-mobile">
+									class="nu-title single-etf-title round-bordered mx-auto white-text font-weight-bold show-mobile">
 									區域型新興國家ETF：<br>
 									廣度投資分散風險
 								</h3>
-								<p class="text-center hide-mobile">
+								<p class="text-center hide-tablet">
 									資產布局在特定區域中，避免過度集中單一國家，<br>
 									掌握快速發展且具備成長潛力區域，區域型新興國家 ETF 應有盡有！
 								</p>
-								<ul class="show-mobile">
+								<ul class="show-tablet font-weight-bold">
 									<li>
-										資產布局在特定區域中，避免過度集中單一國家
+										資產布局在特定區域中，避免過度集中單一國家。
 									</li>
-									<li>掌握快速發展且具備成長潛力區域，區域型新興國家 ETF 應有盡有</li>
+									<li>掌握快速發展且具備成長潛力區域，區域型新興國家ETF應有盡有！</li>
 								</ul>
 								<div class="d-flex illustration-col">
 									<div class="left-icon d-flex  font-weight-bold text-left">
@@ -495,32 +520,31 @@
 									</div>
 								</div>
 								<buton class="btn btn-outline-primary mx-auto font-weight-bold"
-									data-target="nu-etf-group">立即挑選新興國家ETF
+									data-target="nu-etf-group">立即挑選區域型新興國家ETF
 								</buton>
 							</div>
 
-							<div class="single-etf-slide" id="asia-genre">
+							<div class="single-etf-slide">
 								<!-- desktop title -->
 								<h3
-									class="single-etf-title round-bordered mx-auto white-text font-weight-bold hide-mobile">
+									class="asia-title single-etf-title round-bordered mx-auto white-text font-weight-bold hide-mobile">
 									單一亞太國家ETF：深度投資潛力國度
 								</h3>
 								<!-- mobile title -->
 								<h3
-									class="single-etf-title round-bordered mx-auto white-text font-weight-bold show-mobile">
+									class="asia-title single-etf-title round-bordered mx-auto white-text font-weight-bold show-mobile">
 									單一亞太國家ETF：<br>
 									深度投資潛力國度
 								</h3>
-								<p class="text-center hide-mobile">
+								<p class="text-center hide-tablet">
 									亞洲經濟成長迅速，率先從Covid-19下復甦，
 									從世界工廠至未來最大經濟體，<br />看好亞洲特定國家成長潛力，鎖定國家型ETF就對囉！
 								</p>
-								<ul class="show-mobile">
+								<ul class="show-tablet font-weight-bold">
 									<li>
-										亞洲經濟成長迅速，率先從Covid-19下復甦，
-										從世界工廠至未來最大經濟體
+										亞洲經濟成長迅速，率先從Covid 19 下復甦。
 									</li>
-									<li>看好亞洲特定國家成長潛力，鎖定國家型ETF就對囉</li>
+									<li>從世界工廠至未來最大經濟體，看好亞洲特定國家成長潛力，鎖定國家型ETF就對囉！</li>
 								</ul>
 								<div class="d-flex illustration-col">
 									<div class="left-icon d-flex  font-weight-bold text-left">
@@ -548,8 +572,7 @@
 						</div>
 					</div>
 				</section>
-				<!-- chart part -->
-				<section id="etf-lab-wrap" class="etf-lab-wrap">
+				<section id="etf-lab-wrap" class="etf-lab-wrap sec-elm">
 					<div class="etf-lab d-flex mx-auto">
 						<div class="lab-title d-flex">
 							<h2 class="font-weight-bold text-center">
@@ -565,9 +588,9 @@
 							</div>
 							<div class="topic-right d-flex font-weight-bold">
 								<h3 class="round-bordered white-text font-weight-bold">
-									天然資源ETF
+									天然資源型ETF
 								</h3>
-								<span>天然ㄟ尚好</span>
+								<span>當通膨來臨的最佳解方！</span>
 							</div>
 						</div>
 						<div class="etf-topic d-flex" data-target="tech-etf-group">
@@ -598,9 +621,9 @@
 							</div>
 							<div class="topic-right d-flex font-weight-bold">
 								<h3 class="round-bordered white-text font-weight-bold">
-									生技健護ETF
+									ARK主動型ETF
 								</h3>
-								<span>後疫情下大勢</span>
+								<span>破壞式創新投資</span>
 							</div>
 						</div>
 						<div class="etf-topic d-flex" data-target="asia-etf-group">
@@ -624,8 +647,10 @@
 							</h2>
 							<div class="etf-group">
 								<div class="single-etf text-center">
-									<h3 class="white-text">QQQ</h3>
-									<p>Invesco 那斯達克100指數ETF</p>
+									<h3 class="white-text font-weight-bold">
+										商品代號：
+										QQQ</h3>
+									<p>Invesco那斯達克100指數 ETF</p>
 									<p class="type-info">股票型 RR4</p>
 									<a class="round-bordered white-text"
 										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=QQQ&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-Technology-Buy&utm_campaign=ETF-landingpage20210415"
@@ -636,7 +661,7 @@
 										<img class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 								<div class="single-etf text-center">
-									<h3 class="white-text">XLK</h3>
+									<h3 class="white-text font-weight-bold">商品代號：XLK</h3>
 									<p>SPDR 科技類股ETF</p>
 									<p class="type-info">股票型 RR4</p>
 									<a class="round-bordered white-text" target="_blank"
@@ -648,22 +673,22 @@
 											src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 								<div class="single-etf text-center">
-									<h3 class="white-text">ROBO</h3>
-									<p>ROBO全球機器人<br>與自動化指數ETF</p>
+									<h3 class="white-text font-weight-bold">商品代號：ROBO</h3>
+									<p>ROBO Global機器人<br>與自動化指數ETF</p>
 									<p class="type-info">股票型 RR4</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S02&prodid=ROBO&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-Technology-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=ROBO&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-Technology-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
 										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}ROBO~ROBO&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-Technology-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 								<div class="single-etf text-center">
-									<h3 class="white-text">IGV</h3>
+									<h3 class="white-text font-weight-bold">商品代號：IGV</h3>
 									<p>iShares擴展科技軟體類股ETF</p>
 									<p class="type-info">股票型 RR4</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S03&prodid=IGV&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-Technology-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=IGV&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-Technology-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
 										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}IGV~IGV&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-Technology-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
@@ -671,11 +696,11 @@
 								</div>
 
 								<div class="single-etf text-center">
-									<h3 class="white-text">SOXX</h3>
-									<p>iShares費城半導體ETF</p>
+									<h3 class="white-text font-weight-bold">商品代號：SOXX</h3>
+									<p>iShares費城交易所半導體ETF</p>
 									<p class="type-info">股票型 RR4</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S04&prodid=SOXX&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-Technology-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=SOXX&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-Technology-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
 										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}SOXX~SOXX&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-Technology-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
@@ -686,40 +711,63 @@
 
 						<div class="etf-row font-weight-bold mx-auto text-center" data-genre="bio" id="bio-etf-group">
 							<h2 class="font-weight-bold text-center d-inline-block">
-								ETF實驗室 生技健護型ETF
+								ETF實驗室 ARK主動型ETF
 							</h2>
 							<div class="etf-group">
 								<div class="single-etf text-center">
-									<h3 class="white-text">XLV</h3>
-									<p>SPDR健康護理類股 ETF</p>
-									<p class="type-info">股票型 RR3</p>
+									<h3 class="white-text font-weight-bold">商品代號：ARKK</h3>
+									<p>ARK新興主動型 ETF</p>
+									<p class="type-info">股票型 RR4</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S05&prodid=XLV&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-BiologicalTechnology-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=ARKK&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-ARKSeries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}XLV~XLV&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-BiologicalTechnology-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}ARKK~ARKK&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-ARKSeries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 								<div class="single-etf text-center">
-									<h3 class="white-text">IBB</h3>
-									<p>iShares那斯達克生技ETF</p>
+									<h3 class="white-text font-weight-bold">商品代號：ARKG</h3>
+									<p>ARK生物基因科技革新主動型 ETF</p>
 									<p class="type-info">股票型 RR4</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S06&prodid=IBB&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-BiologicalTechnology-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=ARKG&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-ARKSeries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}IBB~IBB&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-BiologicalTechnology-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}ARKG~ARKG&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-ARKSeries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 								<div class="single-etf text-center">
-									<h3 class="white-text">PJP</h3>
-									<p>Invesco Dynamic 製藥業 ETF</p>
+									<h3 class="white-text font-weight-bold">商品代號：ARKW</h3>
+									<p>ARK Next物聯網主動型 ETF</p>
 									<p class="type-info">股票型 RR4</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S07&prodid=PJB&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-BiologicalTechnology-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=ARKW&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-ARKSeries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}PJB~PJB&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-BiologicalTechnology-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}ARKW~ARKW&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-ARKSeries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
+								</div>
+								<div class="single-etf text-center">
+									<h3 class="white-text font-weight-bold">商品代號：ARKF</h3>
+									<p>ARK金融科技創新主動型 ETF</p>
+									<p class="type-info">股票型 RR4</p>
+									<a target="_blank" class="round-bordered white-text"
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=ARKF&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-ARKSeries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
+									<a target="_blank" class="round-bordered white-text"
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}ARKF~ARKF&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-ARKSeries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
+								</div>
+
+								<div class="single-etf text-center">
+									<h3 class="white-text font-weight-bold">商品代號：ARKQ</h3>
+									<p>ARK自主技術與機器人主動型 ETF</p>
+									<p class="type-info">股票型 RR4</p>
+									<a target="_blank" class="round-bordered white-text"
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=ARKQ&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-ARKSeries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
+									<a target="_blank" class="round-bordered white-text"
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}ARKQ~ARKQ&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-ARKSeries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 							</div>
@@ -732,99 +780,99 @@
 							</h2>
 							<div class="etf-group">
 								<div class="single-etf text-center">
-									<h3 class="white-text">PBW</h3>
-									<p>Invesco WilderHill 潔淨能源 ETF</p>
+									<h3 class="white-text font-weight-bold">商品代號：PBW</h3>
+									<p>Invesco WilderHill 乾淨能源 ETF</p>
 									<p class="type-info">股票型 RR4</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S08&prodid=PBW&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-NaturalResources-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=PBW&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-NaturalResources-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}PBW~PBW&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-NaturalResources-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}PBW~PBW&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-NaturalResources-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 
 								<div class="single-etf text-center">
-									<h3 class="white-text">XME</h3>
-									<p>SPDR 標普金屬與礦業 ETF</p>
+									<h3 class="white-text font-weight-bold">商品代號：XME</h3>
+									<p>SPDR 標普金屬與礦產業 ETF</p>
 									<p class="type-info">股票型 RR4</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S09&prodid=XME&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-NaturalResources-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=XME&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-NaturalResources-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}XME~XME&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-NaturalResources-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}XME~XME&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-NaturalResources-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 
 								<div class="single-etf text-center">
-									<h3 class="white-text">XLE</h3>
+									<h3 class="white-text font-weight-bold">商品代號：XLE</h3>
 									<p>SPDR 能源類股 ETF</p>
 									<p class="type-info">股票型 RR4</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S10&prodid=XLE&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-NaturalResources-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=XLE&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-NaturalResources-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}XLE~XLE&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-NaturalResources-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}XLE~XLE&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-NaturalResources-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 
 
 
 								<div class="single-etf text-center">
-									<h3 class="white-text">GLD</h3>
+									<h3 class="white-text font-weight-bold">商品代號：GLD</h3>
 									<p>SPDR 黃金 ETF</p>
 									<p class="type-info">特殊型 RR6</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S11&prodid=GLD&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-NaturalResources-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=GLD&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-NaturalResources-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}GLD~GLD&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-NaturalResources-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}GLD~GLD&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-NaturalResources-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 								<div class="single-etf text-center">
-									<h3 class="white-text">GDX</h3>
+									<h3 class="white-text font-weight-bold">商品代號：GDX</h3>
 									<p>VanEck Vectors 黃金礦業 ETF</p>
 									<p class="type-info">股票型 RR5</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S12&prodid=GDX&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-NaturalResources-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=GDX&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-NaturalResources-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}GDX~GDX&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-NaturalResources-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}GDX~GDX&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-NaturalResources-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 
 								<div class="single-etf text-center">
-									<h3 class="white-text">TAN</h3>
+									<h3 class="white-text font-weight-bold">商品代號：TAN</h3>
 									<p>Invesco 太陽能 ETF</p>
 									<p class="type-info">股票型 RR4</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S13&prodid=TAN&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-NaturalResources-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=TAN&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-NaturalResources-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}TAN~TAN&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-NaturalResources-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}TAN~TAN&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-NaturalResources-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 
 
 								<div class="single-etf text-center">
-									<h3 class="white-text">MOO</h3>
+									<h3 class="white-text font-weight-bold">商品代號：MOO</h3>
 									<p>VanEck Vectors 農業企業 ETF</p>
 									<p class="type-info">股票型 RR4</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S14&prodid=MOO&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-NaturalResources-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=MOO&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-NaturalResources-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}MOO~MOO&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-NaturalResources-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}MOO~MOO&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-NaturalResources-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 								<div class="single-etf text-center">
-									<h3 class="white-text">MXI</h3>
-									<p>iShares S&P 全球原物料 ETF</p>
+									<h3 class="white-text font-weight-bold">商品代號：MXI</h3>
+									<p>iShares 全球原物料 ETF</p>
 									<p class="type-info">股票型 RR4</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S15&prodid=MXI&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-NaturalResources-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=MXI&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-NaturalResources-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}MXI~MXI&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-NaturalResources-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}MXI~MXI&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-NaturalResources-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 							</div>
@@ -832,81 +880,81 @@
 
 						<div class="etf-row font-weight-bold mx-auto text-center" data-genre="nu" id="nu-etf-group">
 							<h2 class="font-weight-bold text-center d-inline-block">
-								ETF實驗室 區域型新興國家
+								ETF實驗室 區域型新興國家ETF
 							</h2>
 							<div class="etf-group">
 								<div class="single-etf text-center">
-									<h3 class="white-text">EEM</h3>
+									<h3 class="white-text font-weight-bold">商品代號：EEM</h3>
 									<p>iShares MSCI 新興市場 ETF</p>
 									<p class="type-info">股票型 RR5</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S16&prodid=EEM&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-EmergingCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=EEM&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-EmergingCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}EEM~EEM&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-EmergingCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}EEM~EEM&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-EmergingCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 
 
 								<div class="single-etf text-center">
-									<h3 class="white-text">BKF</h3>
+									<h3 class="white-text font-weight-bold">商品代號：BKF</h3>
 									<p>iShares MSCI 金磚四國 ETF</p>
 									<p class="type-info">股票型 RR5</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S17&prodid=BKF&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-EmergingCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=BKF&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-EmergingCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}BKF~BKF&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-EmergingCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}BKF~BKF&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-EmergingCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 
 
 								<div class="single-etf text-center">
-									<h3 class="white-text">EPP</h3>
+									<h3 class="white-text font-weight-bold">商品代號：EPP</h3>
 									<p>iShares MSCI 太平洋不含日本 ETF</p>
 									<p class="type-info">股票型 RR5</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S18&prodid=EPP&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-EmergingCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=EPP&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-EmergingCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}EPP~EPP&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-EmergingCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}EPP~EPP&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-EmergingCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 
 
 								<div class="single-etf text-center">
-									<h3 class="white-text">FM</h3>
-									<p>iShares MSCI 前緣市場 ETF</p>
+									<h3 class="white-text font-weight-bold">商品代號：FM</h3>
+									<p>iShares MSCI邊境市場<br>與精選新興市場 ETF</p>
 									<p class="type-info">股票型 RR5</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S19&prodid=FM&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-EmergingCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=FM&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-EmergingCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}FM~FM&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-EmergingCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}FM~FM&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-EmergingCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 
 								<div class="single-etf text-center">
-									<h3 class="white-text">EFA</h3>
+									<h3 class="white-text font-weight-bold">商品代號：EFA</h3>
 									<p>iShares MSCI 歐澳遠東 ETF</p>
 									<p class="type-info">股票型 RR4</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S20&prodid=EFA&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-EmergingCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=EFA&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-EmergingCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}EFA~EFA&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-EmergingCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}EFA~EFA&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-EmergingCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 
 								<div class="single-etf text-center">
-									<h3 class="white-text">ILF</h3>
+									<h3 class="white-text font-weight-bold">商品代號：ILF</h3>
 									<p>iShares 拉丁美洲 40 ETF</p>
 									<p class="type-info">股票型 RR5</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S21&prodid=ILF&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-EmergingCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=ILF&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-EmergingCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}ILF~ILF&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-EmergingCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}ILF~ILF&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-EmergingCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 
@@ -919,85 +967,85 @@
 							</h2>
 							<div class="etf-group">
 								<div class="single-etf text-center">
-									<h3 class="white-text">02823</h3>
+									<h3 class="white-text font-weight-bold">商品代號：02823</h3>
 									<p>iShares 安碩富時 A50 中國指數 ETF</p>
 									<p class="type-info">股票型 RR5</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S22&prodid=02823&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-AsiaCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=02823&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-AsiaCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}2823]HK~02823&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-AsiaCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}2823]HK~02823&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-AsiaCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 								<div class="single-etf text-center">
-									<h3 class="white-text">INDY</h3>
+									<h3 class="white-text font-weight-bold">商品代號：INDY</h3>
 									<p>iShares 印度 50 ETF</p>
 									<p class="type-info">股票型 RR5</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S23&prodid=INDY&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-AsiaCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=INDY&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-AsiaCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}INDY~INDY&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-AsiaCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}INDY~INDY&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-AsiaCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 
 								<div class="single-etf text-center">
-									<h3 class="white-text">VNM</h3>
+									<h3 class="white-text font-weight-bold">商品代號：VNM</h3>
 									<p>VanEck Vectors 越南 ETF</p>
 									<p class="type-info">股票型 RR5</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S24&prodid=VNM&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-AsiaCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=VNM&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-AsiaCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}VNM~VNM&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-AsiaCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}VNM~VNM&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-AsiaCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 
 								<div class="single-etf text-center">
-									<h3 class="white-text">EWJ</h3>
+									<h3 class="white-text font-weight-bold">商品代號：EWJ</h3>
 									<p>iShares MSCI 日本 ETF</p>
 									<p class="type-info">股票型 RR4</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S25&prodid=EWJ&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-AsiaCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=EWJ&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-AsiaCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}EWJ~EWJ&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-AsiaCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}EWJ~EWJ&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-AsiaCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 
 								<div class="single-etf text-center">
-									<h3 class="white-text">EWY</h3>
+									<h3 class="white-text font-weight-bold">商品代號：EWY</h3>
 									<p>iShares MSCI 南韓指數 ETF</p>
 									<p class="type-info">股票型 RR5</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S26&prodid=EWY&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-AsiaCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=EWY&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-AsiaCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}EWY~EWY&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-AsiaCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}EWY~EWY&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-AsiaCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 
 								<div class="single-etf text-center">
-									<h3 class="white-text">THD</h3>
+									<h3 class="white-text font-weight-bold">商品代號：THD</h3>
 									<p>iShares MSCI 泰國指數 ETF</p>
 									<p class="type-info">股票型 RR5</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S27&prodid=THD&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-AsiaCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=THD&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-AsiaCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}THD~THD&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-AsiaCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}THD~THD&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-AsiaCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 
 								<div class="single-etf text-center">
-									<h3 class="white-text">EIDO</h3>
+									<h3 class="white-text font-weight-bold">商品代號：EIDO</h3>
 									<p>iShares MSCI 印尼 ETF</p>
 									<p class="type-info">股票型 RR5</p>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S28&prodid=EIDO&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-AsiaCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
+										href="https://mma.sinopac.com/MemberPortal/Stock/EtfHome.aspx?prefunc=FSI000S01&prodid=EIDO&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-AsiaCountries-Buy&utm_campaign=ETF-landingpage20210415">立即GO<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 									<a target="_blank" class="round-bordered white-text"
-										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}EIDO~EIDO&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFSubpage-AsiaCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
+										href="https://mmafund.sinopac.com/w/blank.asp?sUrl=$ETFWEB$HTML$ETFREPORT]DJHTM?|ETFID}EIDO~EIDO&utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPage-AsiaCountries-Information&utm_campaign=ETF-landingpage20210415">看ETF詳情<img
 											class="d-inline-block" src="./assets/img/pageItem/lab-arrow.svg"></a>
 								</div>
 							</div>
@@ -1006,55 +1054,73 @@
 				</section>
 
 
-				<section id="article-sec" class="article-sec text-center">
+				<section id="article-sec" class="article-sec text-center sec-elm">
 					<h2 class="font-weight-bold d-inline-block">知識文章</h2>
 					<div class="article-wrap d-flex mx-auto">
 						<div class="article-col">
-							<img src="./assets/img/pageItem/article1.png" alt="" />
-							<h4 class="white-text font-weight-bold">
-								一次看懂，<br />
-								投資ETF的十大重點
-							</h4>
+							<a target="_blank"
+								href="https://bank.sinopac.com/sinopacBT/webevents/FinancialManagement/blogs_detail_022.html?utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPageARTICLE1&utm_campaign=ETF landingpage20210415">
+								<img src="./assets/img/pageItem/article1.png" alt="" />
+								<h4 class="white-text font-weight-bold">
+									一次看懂，<br />
+									投資ETF的十大重點
+								</h4>
+							</a>
 						</div>
 						<div class="article-col">
-							<img src="./assets/img/pageItem/article2.png" alt="" />
-							<h4 class="white-text font-weight-bold">
-								【ETF新手系列】<br />
-								基金跟ETF最大的差別是什麼?
-							</h4>
-						</div>
-
-						<div class="article-col">
-							<img src="./assets/img/pageItem/article3.png" alt="" />
-							<h4 class="white-text font-weight-bold">
-								什麼是股票ETF? <br />
-								什麼是債券ETF?
-							</h4>
+							<a target="_blank"
+								href="https://bank.sinopac.com/sinopacBT/webevents/FinancialManagement/blogs_detail_023.html?utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPageARTICLE2&utm_campaign=ETF landingpage20210415">
+								<img src="./assets/img/pageItem/article2.png" alt="" />
+								<h4 class="white-text font-weight-bold">
+									基金跟ETF最大的差別是什麼?
+								</h4>
+							</a>
 						</div>
 
 						<div class="article-col">
-							<img src="./assets/img/pageItem/article4.png" alt="" />
-							<h4 class="white-text font-weight-bold">
-								美股三大指數ETF比較，S&P 500、道瓊、納斯達克ETF差在哪？
-							</h4>
+							<a target="_blank"
+								href="https://bank.sinopac.com/sinopacBT/webevents/FinancialManagement/blogs_detail_004.html?utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPageARTICLE3&utm_campaign=ETF landingpage20210415">
+								<img src="./assets/img/pageItem/article3.png" alt="" />
+								<h4 class="white-text font-weight-bold">
+									什麼是股票ETF? <br />
+									什麼是債券ETF?
+								</h4>
+							</a>
 						</div>
 
 						<div class="article-col">
-							<img src="./assets/img/pageItem/article5.png" alt="" />
-							<h4 class="white-text font-weight-bold">
-								基金跟ETF最大的差別是什麼？
-							</h4>
+							<a target="_blank"
+								href="https://bank.sinopac.com/sinopacBT/webevents/FinancialManagement/blogs_detail_027.html?utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPageARTICLE4&utm_campaign=ETF landingpage20210415">
+								<img src="./assets/img/pageItem/article4.png" alt="" />
+								<h4 class="white-text font-weight-bold">
+									美股三大指數ETF比較，S&P 500、道瓊、納斯達克
+								</h4>
+							</a>
 						</div>
 
 						<div class="article-col">
-							<img src="./assets/img/pageItem/article6.png" alt="" />
-							<h4 class="white-text font-weight-bold">
-								為什麼我非理財不可！？<br>通膨與複利的驚人威力
-							</h4>
+							<a target="_blank"
+								href="https://bank.sinopac.com/sinopacBT/webevents/FinancialManagement/blogs_detail_013.html?utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPageARTICLE5&utm_campaign=ETF landingpage20210415">
+								<img src="./assets/img/pageItem/article5.png" alt="" />
+								<h4 class="white-text font-weight-bold">
+									認識被動收入，<br>
+									打造財富自由夢想！
+								</h4>
+							</a>
+						</div>
+
+						<div class="article-col">
+							<a target="_blank"
+								href="https://bank.sinopac.com/sinopacBT/webevents/FinancialManagement/blogs_detail_011.html?utm_source=mweb&utm_medium=links&utm_term=nonpaid&utm_content=ETFLandingPageARTICLE6&utm_campaign=ETF landingpage20210415">
+								<img src="./assets/img/pageItem/article6.png" alt="" />
+								<h4 class="white-text font-weight-bold">
+									為什麼我非理財不可！？<br>通膨與複利的驚人威力
+								</h4>
+							</a>
 						</div>
 					</div>
 				</section>
-				<section id="notice-wrap" class="notice-wrap">
+				<section id="notice-wrap" class="notice-wrap sec-elm">
 					<div class="notice-title" class="navbar-toggler" data-toggle="collapse"
 						data-target="#notice-collapse" aria-controls="notice-collapse" aria-expanded="false"
 						aria-label="notice-collapse">
@@ -1064,18 +1130,16 @@
 					<div id="notice-collapse" class="notice-collapse mx-auto collapse">
 						<ul>
 							<li class="font-weight-bold">
-								巴菲特的操作之模擬投資工具為西元2011年~2020年S&P
-								500指數總報酬率，投資人因不同時間進場，將有不同之投資績效，過去績效亦不代表未來績效之保證。
+								滾雪球操作之模擬投資工具為西元2011年~2020年S&P500指數總報酬率，投資人因不同時間進場，將有不同之投資績效，過去績效亦不代表未來績效之保證。
 							</li>
 							<li class="font-weight-bold">
-								巴菲特的操作之模擬結果，是以S&P
-								500指數各年度累積報酬率資料做計算，並未考量ETF費用、稅務、可能交易價格、匯率變化、以及實際投資時間差之影響。
+								滾雪球操作之模擬結果，是以S&P500指數各年度累積報酬率資料做計算，並未考量ETF費用、稅務、可能交易價格、匯率變化、以及實際投資時間差之影響。
 							</li>
 							<li class="font-weight-bold">
-								巴菲特的操作之模擬結果僅供參考，非屬信託推介或任何投資決策之建議，亦不代表投資組合之實際報酬率及未來績效保證，不同時間進行模擬操作，其結果亦可能不同；本行就上開報告內容可隨時更改或撤回。任何基於前開內容之交易或投資決定，投資人均須自負風險及盈虧，本行不負任何責任；投資人不得因信賴該等資料為由，向本行主張權利或提出訴訟。
+								滾雪球操作之模擬結果僅供參考，非屬信託推介或任何投資決策之建議，亦不代表投資組合之實際報酬率及未來績效保證，不同時間進行模擬操作，其結果亦可能不同；本行就上開報告內容可隨時更改或撤回。任何基於前開內容之交易或投資決定，投資人均須自負風險及盈虧，本行不負任何責任；投資人不得因信賴該等資料為由，向本行主張權利或提出訴訟。
 							</li>
 							<li class="font-weight-bold">
-								巴菲特的操作之模擬期間報酬率係依據投資人設定之投資年限而定。
+								滾雪球操作之模擬期間報酬率係依據投資人設定之投資年限而定。
 							</li>
 							<li class="font-weight-bold">
 								ETF實驗室所列示之個別ETF，乃挑選當時基於本行相信為可靠之訊息經分析判斷所為之篩選，惟各該ETF之表現將根據金融市場變化或其他因素而與原先之判斷不同甚至背離甚遠，當出現各該基金表現與原先判斷不同之情形時，本行將不針對此等變化而為個別客戶通知。
@@ -1144,19 +1208,20 @@
 					</div>
 				</section>
 				<!-- side btn -->
-				<a class="side-btn" href="" target="_blank">
-
-					<img src="./assets/img/pageItem/side-btn.svg" alt="">
-					<span>立即開戶</span>
-
+				<a class="side-btn font-weight-bold text-center d-flex"
+					href="https://apply.sinopac.com/OpenAccount/OpenAccount/Login?openExternalBrowser=1&tickset=SIN020&tko=ETFMKT&utm_source=mgm&utm_medium=links&utm_term=nonpaid&utm_content=SIN020 ETFMKT&utm_campaign=mgm#"
+					target="_blank">
+					<span>立即<br>開戶</span>
 				</a>
 			</div>
 		</div>
 	</div>
 	<!-- footer -->
 	<footer class="text-center">
-		<span class="white-text">
-			©版權所有&nbsp;永豐銀行
+		<span class="white-text">©永豐銀行版權所有&nbsp;&nbsp;&nbsp;&nbsp;</span>
+		<span class="white-text hide-tablet">建議瀏覽器設定IE11以上/解析度1024*768&nbsp;&nbsp;&nbsp;&nbsp;
+			<a class="white-text" href="https://bank.sinopac.com/mma8/bank/service/service-index.html"
+				target="_blank">客服中心</a>
 		</span>
 	</footer>
 	<!-- dots anchor -->
@@ -1165,28 +1230,25 @@
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="./assets/js/popper.min.js"></script>
+	<script src="./assets/js/popper.min.securejs"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 
-	<!-- <script
-		type="text/javascript"
-		src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.0.0-rc.2/d3.min.js"
-	></script> -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.0.0-rc.2/d3.min.js"></script>
 
-	<script type="text/javascript" src="./assets/js/d3.js"></script>
+	<!-- <script type="text/javascript" src="./assets/js/d3.js"></script> -->
 	<script type="text/javascript"
 		src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	<script type="text/javascript"
 		src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 	<!-- d3 tooltip -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script>
-	<script type="text/javascript" src="assets/js/custom.js"></script>
-	<script type="text/javascript" src="assets/js/scrollEvt.js"> </script>
-	<script type="text/javascript" src="assets/js/menuEffect.js"></script>
-	<script type="text/javascript" src="assets/js/slider.js"></script>
+	<script type="text/javascript" src="assets/js/custom.securejs"></script>
+	<script type="text/javascript" src="assets/js/scrollEvt.securejs"> </script>
+	<script type="text/javascript" src="assets/js/menuEffect.securejs"></script>
+	<script type="text/javascript" src="assets/js/slider.securejs"></script>
 
 	<script>
 	</script>
