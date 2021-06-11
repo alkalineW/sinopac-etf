@@ -1409,6 +1409,18 @@ nav {
   background-color: #cd411e;
 }
 
+.kv-section .rounded-anchor button {
+  background-color: transparent;
+  border: none;
+  z-index: 9;
+  position: relative;
+}
+
+.kv-section .rounded-anchor button:focus {
+  border: none;
+  outline: none;
+}
+
 .etf-main-benefits {
   max-width: 1080px;
   margin: auto;
@@ -2124,7 +2136,7 @@ nav {
 
 .range-slider-outter {
   padding: 0 20px;
-  height: 20px;
+  height: 100%;
   position: relative;
 }
 
@@ -2993,6 +3005,11 @@ svg text {
   width: 48%;
   margin: 1rem 1%;
   cursor: pointer;
+  outline: none;
+  border: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -3047,83 +3064,83 @@ svg text {
   }
 }
 
-.etf-lab .etf-topic:nth-of-type(2) {
+.etf-lab .etf-topic:nth-of-type(1) {
   background-color: #d5f7f3;
 }
 
 @media (max-width: 768px) {
-  .etf-lab .etf-topic:nth-of-type(2) {
+  .etf-lab .etf-topic:nth-of-type(1) {
     -webkit-box-ordinal-group: 4;
             order: 3;
     -ms-flex-order: 3;
   }
 }
 
-.etf-lab .etf-topic:nth-of-type(2) .round-bordered {
+.etf-lab .etf-topic:nth-of-type(1) .round-bordered {
   background-color: #1a90aa;
 }
 
-.etf-lab .etf-topic:nth-of-type(3) {
+.etf-lab .etf-topic:nth-of-type(2) {
   background-color: #d2f2ff;
 }
 
 @media (max-width: 768px) {
-  .etf-lab .etf-topic:nth-of-type(3) {
+  .etf-lab .etf-topic:nth-of-type(2) {
     -webkit-box-ordinal-group: 2;
             order: 1;
     -ms-flex-order: 1;
   }
 }
 
-.etf-lab .etf-topic:nth-of-type(3) .round-bordered {
+.etf-lab .etf-topic:nth-of-type(2) .round-bordered {
   background-color: #005d9b;
 }
 
-.etf-lab .etf-topic:nth-of-type(4) {
+.etf-lab .etf-topic:nth-of-type(3) {
   background-color: #d6f4b0;
 }
 
 @media (max-width: 768px) {
-  .etf-lab .etf-topic:nth-of-type(4) {
+  .etf-lab .etf-topic:nth-of-type(3) {
     -webkit-box-ordinal-group: 5;
             order: 4;
     -ms-flex-order: 4;
   }
 }
 
-.etf-lab .etf-topic:nth-of-type(4) .round-bordered {
+.etf-lab .etf-topic:nth-of-type(3) .round-bordered {
   background-color: #009036;
 }
 
-.etf-lab .etf-topic:nth-of-type(5) {
+.etf-lab .etf-topic:nth-of-type(4) {
   background-color: #ebdefc;
 }
 
 @media (max-width: 768px) {
-  .etf-lab .etf-topic:nth-of-type(5) {
+  .etf-lab .etf-topic:nth-of-type(4) {
     -webkit-box-ordinal-group: 3;
             order: 2;
     -ms-flex-order: 2;
   }
 }
 
-.etf-lab .etf-topic:nth-of-type(5) .round-bordered {
+.etf-lab .etf-topic:nth-of-type(4) .round-bordered {
   background-color: #683275;
 }
 
-.etf-lab .etf-topic:nth-of-type(6) {
+.etf-lab .etf-topic:nth-of-type(5) {
   background-color: #f7e88b;
 }
 
 @media (max-width: 768px) {
-  .etf-lab .etf-topic:nth-of-type(6) {
+  .etf-lab .etf-topic:nth-of-type(5) {
     -webkit-box-ordinal-group: 6;
             order: 5;
     -ms-flex-order: 5;
   }
 }
 
-.etf-lab .etf-topic:nth-of-type(6) .round-bordered {
+.etf-lab .etf-topic:nth-of-type(5) .round-bordered {
   background-color: #df6e36;
 }
 
@@ -3847,6 +3864,13 @@ svg text {
   cursor: pointer;
   text-align: left;
   position: relative;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+.whatIsIndex:focus {
+  outline: none;
 }
 
 .whatIsIndex:after {
@@ -3854,7 +3878,7 @@ svg text {
   height: 36px;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 5px;
   border-radius: 40px;
   z-index: 1;
   background-color: #767777;
